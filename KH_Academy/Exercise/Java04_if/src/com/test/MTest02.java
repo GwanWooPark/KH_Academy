@@ -1,7 +1,6 @@
 package com.test;
 
 import java.util.Calendar;
-
 public class MTest02 {
     public static void main(String[] args) {
         // 1. 입력받은 수가 5의 배수이면 "5의 배수입니다 "를 출력
@@ -10,7 +9,6 @@ public class MTest02 {
         test02(18);
         // 3. 입력받은 문자가 소문자라면 "소문자 입니다", 대문자라면 "대문자 입니다 " 출력
         test03('A');
-
     }
 
     public static void test01(int i) {

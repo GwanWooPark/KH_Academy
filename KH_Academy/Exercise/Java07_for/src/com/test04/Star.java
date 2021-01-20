@@ -88,7 +88,7 @@ public class Star {
      *********
      *
      */
-    
+
     public static void prn05() {
 
         int con = 0;

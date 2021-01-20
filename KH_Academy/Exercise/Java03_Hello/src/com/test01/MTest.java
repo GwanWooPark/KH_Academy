@@ -17,7 +17,6 @@ public class MTest {
         System.out.println(result);
 
         opr07();
-
     }
 
     public static String opr01 (int a, int b){
@@ -107,7 +106,6 @@ public class MTest {
     public static void opr05() {
 
         int i = 10;
-
 
         System.out.println(i == TEN);
         System.out.println(i != TEN);

@@ -11,7 +11,6 @@ public class MTest {
 
        4. MTest class에서 Score 클래스의 두 메소드를 호출해서 리턴받은 값을 출력.
           출력 예) 홍길동님의 평균은 98.99이고, 등급은 "A"입니다.
-
      */
 
     public static void main(String[] args) {
@@ -22,7 +21,6 @@ public class MTest {
         int math = 97;
 
         double avg = Score.getAvg(kor, eng, math);
-
         char grade = Score.getGrade(avg);
 
         System.out.printf("%s님의 평균은 %.2f이고, 등급은 \"%c\"입니다.", name, avg, grade);

@@ -12,7 +12,6 @@ public class MTest01 {
         privateMethod();
     }
 
-
     public static void publicMethod() {
         System.out.println("public method");
         System.out.println("어디에서나 접근, 참조 가능(+)\n");

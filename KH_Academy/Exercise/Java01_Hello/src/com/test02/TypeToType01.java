@@ -13,8 +13,6 @@ public class TypeToType01 {
         System.out.println(i01);
 
 
-
-
         //명시적 형 변환 (downCasting : 큰 타입에서 작은 타입으로 - casting)
         int i02 = 100;
         //byte b02 = i02;

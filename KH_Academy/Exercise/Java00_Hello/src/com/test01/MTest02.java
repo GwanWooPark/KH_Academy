@@ -1,6 +1,7 @@
 package com.test01;
 
 public class MTest02 {
+
     public static void main(String[] args) {
         //연산자를 이용하여 su의 각 자리수를 모두 더하여서 출력하자.
         int su = 5678;

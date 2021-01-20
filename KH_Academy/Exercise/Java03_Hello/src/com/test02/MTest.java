@@ -7,7 +7,6 @@ public class MTest {
         bananaBasket.fruitCount = 50;
         System.out.println(bananaBasket.fruitCount);
 
-
         FruitBasket appleBasket = new FruitBasket();
         appleBasket.basketSetting("사과", 30);
         System.out.println(appleBasket.fruitCount);

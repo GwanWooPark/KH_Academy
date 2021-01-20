@@ -170,8 +170,6 @@ public class MTest {
         System.out.println(Integer.toBinaryString(c << 1));
         // 000 0000 0000 0000 0000 0000 0000 1010 0
         System.out.println(c << 1);
-
-
     }
 
 

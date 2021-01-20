@@ -15,7 +15,6 @@ public class FruitBasket {
     // basketSize의 값이 fruitCount의 값보다 크거나 같으면 "바나나의 갯수는 20 입니다." 아니면 바구니가 넘쳤습니다. 출력
     // 해당 클래스 내에서만 접근 가능하고, non-static이고, 리턴하는 값은 없다.
 
-
     private void basketPrn() {
         System.out.printf("바구니안의 과일 : %s \t", fruitName);
         if(basketSize >= fruitCount)

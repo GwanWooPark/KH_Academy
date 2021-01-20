@@ -1,8 +1,6 @@
 package com.test04;
 
 public class Star {
-
-
     /*
         *
         **
@@ -41,6 +39,7 @@ public class Star {
       ******
 
      */
+
     public static void prn03() {
 
         for (int i = 0; i < 5; i++)
@@ -56,6 +55,7 @@ public class Star {
         }
         System.out.println("--------------------");
     }
+
     /*
      *****
       ****
@@ -88,6 +88,7 @@ public class Star {
      *********
      *
      */
+    
     public static void prn05() {
 
         int con = 0;

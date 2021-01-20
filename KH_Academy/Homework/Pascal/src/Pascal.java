@@ -12,6 +12,8 @@ public class Pascal {
         Pas(line, line);
 
         //n번째 라인의 m번째 숫자 = (n-1)번째 라인의 (m-1)번째 숫자 + (n-1)번째 라인의 m번째 숫자
+        //재귀함수
+
     }
 
 
@@ -21,7 +23,7 @@ public class Pascal {
 
         if(line == 1) {
             idx[0] = 1;
-            for (int j = blank; j > 0; j--)
+            for (int j = blank; j > 1; j--)
                 System.out.print(" ");
 
             for(int i = line; i > 0; i--)
@@ -33,7 +35,7 @@ public class Pascal {
             idx[1] = 1;
             Pas(line-1, blank);
 
-            for (int j = blank-1; j > 0; j-=2){
+            for (int j = blank-3; j > 1; j--){
                 System.out.print(" ");
             }
             for(int i = line; i > 0; i--)
@@ -43,11 +45,16 @@ public class Pascal {
         }
 
         else {
+
             int[] temp = Pas(line - 1, blank);
             idx[0] = 1;
             idx[line-1] = 1;
             for(int i = 1; i < line - 1; i++) {
                 idx[i] = temp[i-1] + temp[i];
+            }
+
+            for (int j = blank - line; j > 0; j--) {
+                System.out.print(" ");
             }
 
             for(int j = 0; j < line; j++)

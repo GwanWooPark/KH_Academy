@@ -9,8 +9,6 @@ public class Star {
         ***
         ****
         *****
-
-
      */
     public static void prn01() {
 
@@ -88,8 +86,7 @@ public class Star {
        *****
       *******
      *********
-
-
+     *
      */
     public static void prn05() {
 

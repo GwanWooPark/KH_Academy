@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class LASS {
@@ -28,7 +29,29 @@ public class LASS {
 
     public static String[] lass(int line) {
 
+        String[] arr = new String[line + 2];
+        int breakN = 0;
+        int chk_str = 1;
+        int count = 0;
+        int num = 0;
+
+        Arrays.fill(arr, "0");
+
+        if (line == 1) {
+            arr[0] = "1";
+            System.out.println(arr[0]);
+        } else {
+            String[] tmp = lass(line - 1);
+
+
+
+            for (int i = 0; !arr[i].equals("0"); i++) {
+                System.out.print(arr[i]);
+            }
+            System.out.println();
+
+        }
+
+        return arr;
     }
-
 }
-

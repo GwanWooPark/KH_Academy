@@ -4,7 +4,9 @@ public class Bulls_and_cows {
 
 
     public static void main(String[] args) {
-        play(setCom_num());
+
+        int[] com_num = setCom_num();
+        play(com_num);
 
     }
 
@@ -53,6 +55,7 @@ public class Bulls_and_cows {
             System.out.println("1~9사이의 중복되지 않은 숫자 3개를 입력하십시오.");
             for (int i = 0; i < my_num.length; i++) {
                 my_num[i] = sc.nextInt();
+
                 if(my_num[i] > 9 || my_num[i] < 1) {
                     i--;
                     System.out.println("1 ~ 9사이의 값만 입력해주세요");

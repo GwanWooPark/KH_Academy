@@ -29,7 +29,7 @@ public class LASS {
 
     public static String[] lass(int line) {
 
-        String[] arr = new String[line + 2];
+        String[] arr = new String[30];
         int breakN = 0;
         int chk_str = 1;
         int count = 0;
@@ -40,27 +40,33 @@ public class LASS {
         if (line == 1) {
             arr[0] = "1";
             System.out.println(arr[0]);
-        } else {
+        }
+
+        else {
             String[] tmp = lass(line - 1);
 
-            for (int i = 0; !tmp[i].equals("0"); i++) {
-                // 새로운 문자가 나왔는지 체크하기
-                if (!Integer.toString(chk_str).equals(tmp[i])) {
+            for(int i = 0; !tmp[i].equals("0");  i++) {
+                //새로운 문자 체크
+                if(!tmp[i].equals(Integer.toString(chk_str))) {
                     if (count > 0) {
-                        // 체크하던 문자와 찾은 횟수 입력
+                       //체크하던 문자와 찾은 문자 입력
                         arr[num] = Integer.toString(chk_str);
-                        arr[num + 1] = Integer.toString(count);
+                        arr[num+1] = Integer.toString(count);
                     }
-                    // 새로운 문자를 저장
+                    //새로운 문자 저장
                     chk_str = Integer.parseInt(tmp[i]);
                     count = 1;
                     num+=2;
                 }
 
                 else {
-                    // 같은문자 횟수 증가
                     count++;
                 }
+            }
+
+            if(count > 0) {
+                arr[num] = Integer.toString(chk_str);
+                arr[num+1] = Integer.toString(count);
             }
 
             for (int i = 0; !arr[i].equals("0"); i++) {

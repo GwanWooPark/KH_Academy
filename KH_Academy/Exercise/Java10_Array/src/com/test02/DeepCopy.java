@@ -16,7 +16,6 @@ public class DeepCopy {
         for (int i = 0; i < original.length; i++)
             copyOne[i] = original[i];
 
-
         System.out.println(original[1]);
         System.out.println(copyOne[1]);
         System.out.println(Arrays.toString(original));

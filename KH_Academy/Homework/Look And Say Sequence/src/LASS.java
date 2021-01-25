@@ -30,12 +30,11 @@ public class LASS {
     public static String[] lass(int line) {
 
         String[] arr = new String[30];
-        int breakN = 0;
         int chk_str = 1;
         int count = 0;
         int num = 0;
 
-        Arrays.fill(arr, "0");
+        Arrays.fill(arr, "0"); // 모든 배열 값 0 으로 초기화
 
         if (line == 1) {
             arr[0] = "1";
@@ -56,13 +55,14 @@ public class LASS {
                     //새로운 문자 저장
                     chk_str = Integer.parseInt(tmp[i]);
                     count = 1;
-                    num+=2;
+                    num+=2; // 새로운 문자를 저장하기위해 num 값 증가
                 }
 
                 else {
                     count++;
                 }
             }
+
 
             if(count > 0) {
                 arr[num] = Integer.toString(chk_str);

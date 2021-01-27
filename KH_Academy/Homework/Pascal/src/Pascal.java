@@ -13,7 +13,6 @@ public class Pascal {
 
         //n번째 라인의 m번째 숫자 = (n-1)번째 라인의 (m-1)번째 숫자 + (n-1)번째 라인의 m번째 숫자
         //재귀함수
-
     }
 
     public static int[] Pas(int line, int blank) {

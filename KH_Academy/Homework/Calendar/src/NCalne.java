@@ -16,7 +16,6 @@ public class NCalne {
 
         System.out.println(year + "년 " + month + "월");
 
-
         int[] last_day = {31, 28, 31, 30, 31, 30 ,31 ,31 ,30, 31, 30, 31};
 
         //① 서력 기원 연수가 4로 나누어 떨어지는 해는 우선 윤년으로 하고,

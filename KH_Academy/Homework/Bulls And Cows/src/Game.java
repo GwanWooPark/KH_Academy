@@ -67,7 +67,7 @@ public class Game {
         int count_b = 0;
 
         int[] com_num = setCom_num();
-        
+
         while (true) {
 
             int[] my_num = setMy_num();

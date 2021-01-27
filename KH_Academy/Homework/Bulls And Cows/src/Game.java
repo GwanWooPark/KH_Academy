@@ -61,7 +61,6 @@ public class Game {
 
     public static void strat() {
 
-
         int count = 0;
         int count_s = 0;
         int count_b = 0;

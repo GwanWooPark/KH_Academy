@@ -15,7 +15,7 @@ public class Pascal {
         //재귀함수
 
     }
-    
+
     public static int[] Pas(int line, int blank) {
 
         int[] idx = new int[line];

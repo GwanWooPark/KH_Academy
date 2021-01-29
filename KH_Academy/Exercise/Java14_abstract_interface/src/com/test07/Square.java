@@ -10,7 +10,9 @@ public class Square extends AreaImpl implements Area{
 
     @Override
     public void setResult(String result) {
+        System.out.print("사각형의 ");
         super.setResult(result);
+
     }
 
     @Override
@@ -22,6 +24,6 @@ public class Square extends AreaImpl implements Area{
         int base = sc.nextInt();
         int area = height * base;
 
-        setResult(Integer.toString(area));
+        setResult(area + "");
     }
 }

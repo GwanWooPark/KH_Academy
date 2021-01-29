@@ -14,6 +14,7 @@ public abstract class AreaImpl implements Area{
 	public abstract void make();
 	
 	public void setResult(String result) {
+
 		this.result = result;
 	}
 }

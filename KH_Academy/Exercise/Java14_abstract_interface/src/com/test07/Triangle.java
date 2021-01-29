@@ -7,6 +7,7 @@ public class Triangle extends AreaImpl implements Area{
 
     @Override
     public void print() {
+        System.out.print("삼각형의 ");
         super.print();
     }
 
@@ -24,6 +25,6 @@ public class Triangle extends AreaImpl implements Area{
         int base = sc.nextInt();
         double area = (double) (height * base / 2);
 
-        setResult(Double.toString(area).substring(0, 5));
+        setResult((area+ "").substring(0, 5));
     }
 }

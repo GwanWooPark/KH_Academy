@@ -24,6 +24,7 @@ public class MTest01 {
         ls.add(5);
         ls.add(2);
         System.out.println();
+
     }
 
     public static void transElement(List<String> list) {

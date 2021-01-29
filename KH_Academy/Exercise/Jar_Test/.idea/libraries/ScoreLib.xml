@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ScoreLib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../ScoreLib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

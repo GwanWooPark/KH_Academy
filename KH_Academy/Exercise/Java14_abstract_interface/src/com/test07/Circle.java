@@ -23,7 +23,6 @@ public class Circle extends AreaImpl implements Area{
         Scanner sc = new Scanner(System.in);
 
         int r = sc.nextInt();
-
         double res = Math.pow(r,2) * Math.PI;
 
         setResult((res+ "").substring(0, 5));

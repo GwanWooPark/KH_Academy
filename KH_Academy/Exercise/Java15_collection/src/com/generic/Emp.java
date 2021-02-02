@@ -17,6 +17,7 @@ public class Emp<T> {
     }
 
     public T getEmpno() {
+
         return empno;
     }
     public void setEmpno(T empno){

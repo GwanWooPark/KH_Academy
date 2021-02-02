@@ -15,6 +15,7 @@ public class Car {
     }
 
     public int getSpeed() {
+
         return speed;
     }
 
@@ -26,6 +27,7 @@ public class Car {
         System.out.println("속도 상승");
         speed+=10;
     }
+
     public void breakPedal() {
         speed-=10;
         if (speed > 0) {
@@ -36,8 +38,10 @@ public class Car {
         }
     }
 
+
     @Override
     public String toString() {
+
         return "현재 속도 : " + speed;
     }
 }

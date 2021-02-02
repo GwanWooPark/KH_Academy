@@ -6,10 +6,11 @@ public class MySum {
         return i + j;
     }
 
+    // Overload
     public static double sum(double i, double j) {
         return i + j;
     }
-
+    // Overload
     public static void sum(int i, int j, int k) {
         System.out.println(i + j + k);
     }

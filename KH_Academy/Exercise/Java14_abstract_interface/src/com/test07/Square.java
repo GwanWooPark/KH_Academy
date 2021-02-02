@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Square extends AreaImpl implements Area{
     @Override
     public void print() {
+
         super.print();
     }
 

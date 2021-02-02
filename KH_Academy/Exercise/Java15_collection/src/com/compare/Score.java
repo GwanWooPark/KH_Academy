@@ -99,7 +99,6 @@ public class Score implements Comparable<Object>{
         else if (this.getAvg() < other.getAvg())
             return -1;
 
-
         return 0;
     }
     @Override

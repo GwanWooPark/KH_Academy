@@ -5,6 +5,7 @@ public class Cat extends Animal {
     // bark() -> 반드시 오버라이드해서 구현해야함
     @Override
     public void bark() {
+
         System.out.println("야옹");
     }
 

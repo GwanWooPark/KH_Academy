@@ -14,7 +14,6 @@ public class MTest {
 
           3. MTest에서 실행
          */
-
         Car c1 = new SportCar();
         c1.accelPedal();
         c1.accelPedal();

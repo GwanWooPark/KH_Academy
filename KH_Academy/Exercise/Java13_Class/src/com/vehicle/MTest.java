@@ -13,7 +13,7 @@ public class MTest {
               accelPedal과 breakPedal을 overriding하여, speed는 5씩 증감, "속도가 더 느리게 증가/ 속도가 더 느리게 감소"
 
           3. MTest에서 실행
-         */
+        */
         Car c1 = new SportCar();
         c1.accelPedal();
         c1.accelPedal();

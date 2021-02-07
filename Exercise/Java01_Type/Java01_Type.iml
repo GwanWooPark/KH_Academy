@@ -7,10 +7,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="ScoreLib" level="project" />
-<<<<<<< HEAD
-=======
-    <orderEntry type="module" module-name="ScoreLib" />
->>>>>>> 9876ed39e8c1c8d068b5d5ea91e8ee538e68d192
   </component>
 </module>

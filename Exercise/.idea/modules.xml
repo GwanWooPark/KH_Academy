@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Exam_Test/Exam_Test.iml" filepath="$PROJECT_DIR$/Exam_Test/Exam_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Exercise.iml" filepath="$PROJECT_DIR$/.idea/Exercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jar_Test/Jar_Test.iml" filepath="$PROJECT_DIR$/Jar_Test/Jar_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java00_Hello/Java00_Hello.iml" filepath="$PROJECT_DIR$/Java00_Hello/Java00_Hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java01_Type/Java01_Type.iml" filepath="$PROJECT_DIR$/Java01_Type/Java01_Type.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java02_Method/Java02_Method.iml" filepath="$PROJECT_DIR$/Java02_Method/Java02_Method.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java03_Cal/Java03_Cal.iml" filepath="$PROJECT_DIR$/Java03_Cal/Java03_Cal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java04_if/Java04_if.iml" filepath="$PROJECT_DIR$/Java04_if/Java04_if.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java05_switch/Java05_switch.iml" filepath="$PROJECT_DIR$/Java05_switch/Java05_switch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java06_while/Java06_while.iml" filepath="$PROJECT_DIR$/Java06_while/Java06_while.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java07_for/Java07_for.iml" filepath="$PROJECT_DIR$/Java07_for/Java07_for.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java08_Scanner/Java08_Scanner.iml" filepath="$PROJECT_DIR$/Java08_Scanner/Java08_Scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java09_Practice/Java09_Practice.iml" filepath="$PROJECT_DIR$/Java09_Practice/Java09_Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java10_Array/Java10_Array.iml" filepath="$PROJECT_DIR$/Java10_Array/Java10_Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java11_String/Java11_String.iml" filepath="$PROJECT_DIR$/Java11_String/Java11_String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java13_Class/Java13_Class.iml" filepath="$PROJECT_DIR$/Java13_Class/Java13_Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java14_abstract_interface/Java14_abstract_interface.iml" filepath="$PROJECT_DIR$/Java14_abstract_interface/Java14_abstract_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java15_collection/Java15_collection.iml" filepath="$PROJECT_DIR$/Java15_collection/Java15_collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java16_Exception/Java16_Exception.iml" filepath="$PROJECT_DIR$/Java16_Exception/Java16_Exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java17_IO/Java17_IO.iml" filepath="$PROJECT_DIR$/Java17_IO/Java17_IO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java19_URI/Java19_URI.iml" filepath="$PROJECT_DIR$/Java19_URI/Java19_URI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java20_Network/Java20_Network.iml" filepath="$PROJECT_DIR$/Java20_Network/Java20_Network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ScoreLib/ScoreLib.iml" filepath="$PROJECT_DIR$/ScoreLib/ScoreLib.iml" />
+    </modules>
+  </component>
+</project>

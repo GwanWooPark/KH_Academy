@@ -4,6 +4,15 @@ public class MTest {
 
     public static void main(String[] args) {
 
+<<<<<<< HEAD
+=======
+
+        Emp emp = new Emp();
+        emp.setEmpno("String");
+        emp.setEname("타입 String 설정");
+
+
+>>>>>>> 9876ed39e8c1c8d068b5d5ea91e8ee538e68d192
         Emp emp01 = new Emp();
         emp01.setEmpno("a111");
         emp01.setEname("홍길동");

@@ -2,6 +2,10 @@ package com.generic;
 
 // <> : generic -> 타입 강제
 // T : type / E : element / K : key / V : value
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9876ed39e8c1c8d068b5d5ea91e8ee538e68d192
 public class Emp<T> {
 
     private T empno;

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f031c28-df6b-45ba-b3b1-dd10d2814c6d" name="Default Changelist" comment="" />
+    <list default="true" id="8f031c28-df6b-45ba-b3b1-dd10d2814c6d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DBTest02/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DBTest02/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DBTest02/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DBTest02/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DBTest02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DBTest02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DBTest02/src/com/member/biz/MemberBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DBTest02/src/com/member/biz/MemberBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DBTest02/src/com/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DBTest02/src/com/member/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DBTest02/src/com/member/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DBTest02/src/com/member/dao/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DBTest02/src/com/member/db/JDBCTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DBTest02/src/com/member/db/JDBCTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercise/Java15_collection/Java15_Collection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercise/Java15_collection/Java15_Collection.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -39,7 +50,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Address">
+  <component name="RunManager" selected="Application.MTest01">
     <configuration name="Address" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.test02.Address" />
       <module name="DBTest01" />
@@ -105,21 +116,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Address" />
         <item itemvalue="Application.MTest01" />
+        <item itemvalue="Application.Address" />
         <item itemvalue="Application.MTest04" />
         <item itemvalue="Application.test2" />
         <item itemvalue="Application.test" />
@@ -137,6 +150,7 @@
       <workItem from="1613992116442" duration="6175000" />
       <workItem from="1614063385789" duration="593000" />
       <workItem from="1614064561553" duration="11298000" />
+      <workItem from="1614150783372" duration="446000" />
     </task>
     <servers />
   </component>

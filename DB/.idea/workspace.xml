@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68b92670-0952-4c06-b787-7dcc136ca296" name="Default Changelist" comment="" />
+    <list default="true" id="68b92670-0952-4c06-b787-7dcc136ca296" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DBTest01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest01/out/production/DBTest01/com/test01/MTest01.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTest01/out/production/DBTest01/com/test01/MTest01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DBTest02/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DBTest02/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377/storage_v2/_src_/schema/KH.XQkAAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377/storage_v2/_src_/schema/KH.XQkAAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377/storage_v2/_src_/schema/PUBLIC.aaZQjQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377/storage_v2/_src_/schema/SYS.rUIBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377/storage_v2/_src_/schema/SYSTEM.L2avkg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DBTest02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/src/com/member/biz/MemberBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTest02/src/com/member/biz/MemberBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/src/com/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTest02/src/com/member/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/src/com/member/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTest02/src/com/member/dao/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTest02/src/com/member/db/JDBCTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTest02/src/com/member/db/JDBCTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exercise/Java15_collection/Java15_Collection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercise/Java15_collection/Java15_Collection.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,6 +92,9 @@
       <option name="presentableId" value="Default" />
       <updated>1614063427532</updated>
       <workItem from="1614063428937" duration="1114000" />
+      <workItem from="1614156516716" duration="354000" />
+      <workItem from="1614156944302" duration="72000" />
+      <workItem from="1614157055811" duration="153000" />
     </task>
     <servers />
   </component>
@@ -90,5 +111,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

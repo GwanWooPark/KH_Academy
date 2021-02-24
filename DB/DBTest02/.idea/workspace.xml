@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1b7a0d6-3f25-4b64-8d9f-68269ce42c45" name="Default Changelist" comment="" />
+    <list default="true" id="b1b7a0d6-3f25-4b64-8d9f-68269ce42c45" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DBTest01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DBTest01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DBTest01/out/production/DBTest01/com/test01/MTest01.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DBTest01/out/production/DBTest01/com/test01/MTest01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377/storage_v2/_src_/schema/KH.XQkAAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377/storage_v2/_src_/schema/KH.XQkAAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377/storage_v2/_src_/schema/PUBLIC.aaZQjQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377/storage_v2/_src_/schema/SYS.rUIBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46fbf1cc-fd9a-47ed-981a-67fad65a7377/storage_v2/_src_/schema/SYSTEM.L2avkg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/member/biz/MemberBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/member/biz/MemberBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/member/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/member/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/member/dao/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/member/db/JDBCTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/member/db/JDBCTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/DB/com/test01/MTest04.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/DB/com/test01/MTest04.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercise/Java15_collection/Java15_Collection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercise/Java15_collection/Java15_Collection.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,17 +67,24 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="MemberController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.member.controller.MemberController" />
+      <module name="DBTest02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.member.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MemberController" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,6 +95,11 @@
       <option name="presentableId" value="Default" />
       <updated>1614078685883</updated>
       <workItem from="1614078687626" duration="6065000" />
+      <workItem from="1614148271890" duration="1711000" />
+      <workItem from="1614150191352" duration="5948000" />
+      <workItem from="1614156951363" duration="65000" />
+      <workItem from="1614157054537" duration="9000" />
+      <workItem from="1614157221402" duration="4807000" />
     </task>
     <servers />
   </component>
@@ -85,5 +116,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

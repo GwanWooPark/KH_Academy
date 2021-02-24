@@ -1,4 +1,4 @@
-package com.member.db;
+package com.score.db;
 
 import java.sql.*;
 

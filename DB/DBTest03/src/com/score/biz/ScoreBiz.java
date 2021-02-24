@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ScoreBiz {
 
-    ScoreDaoImpl dao = new ScoreDaoImpl(); // 뭐지
+    ScoreDaoImpl dao = new ScoreDaoImpl();
 
     public List<ScoreDto> selectList();
 
@@ -18,6 +18,6 @@ public interface ScoreBiz {
 
     public int update(ScoreDto dto);
 
-    public int delete(ScoreDto dto);
+    public int delete(String name);
 
 }

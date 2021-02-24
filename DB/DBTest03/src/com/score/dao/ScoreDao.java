@@ -18,7 +18,7 @@ public interface ScoreDao {
                         " VALUES(?, ?, ?, ?, ?, ?, ?)";
 
     String UPDATE_SQL = " UPDATE SCORE " +
-                        " SET S_NAME = ?, S_KOR = ?, S_ENG = ?, S_MATH = ?, S_SUM = ?, S_AVG = ?, S_GRADE = ? " +
+                        " SET S_KOR = ?, S_ENG = ?, S_MATH = ?, S_SUM = ?, S_AVG = ?, S_GRADE = ? " +
                         " WHERE S_NAME = ? ";
 
     String DELETE_SQL = " DELETE FROM SCORE " +

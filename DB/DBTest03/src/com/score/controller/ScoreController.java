@@ -11,6 +11,7 @@ public class ScoreController {
 
     private static Scanner sc = new Scanner(System.in);
 
+
     public static int getMenu() {
 
 
@@ -48,12 +49,16 @@ public class ScoreController {
                     }
                     break;
                 case 2:
+                    System.out.println("출력할 이름 : ");
+                    String name = sc.next();
+                    ScoreDto dto = biz.selectOne(name);
+                    System.out.println(dto);
                     break;
                 case 3:
                     System.out.println("추가!");
                     // 이름, 국, 영, 수, 총점, 평균, 성적
                     System.out.print("이름 입력 : ");
-                    String name = sc.next();
+                    name = sc.next();
                     System.out.print("국어 점수 : ");
                     int kor = sc.nextInt();
                     System.out.print("영어 점수 : ");
@@ -77,10 +82,42 @@ public class ScoreController {
                     }
                     break;
                 case 4:
+                    System.out.println("수정하고자 하는 이름 입력 : ");
+                    name = sc.next();
+                    System.out.println("수정할 국어 점수 : ");
+                    kor = sc.nextInt();
+                    System.out.println("수정할 영어 점수 : ");
+                    eng = sc.nextInt();
+                    System.out.println("수정할 수학 점수 : ");
+                    math = sc.nextInt();
+                    System.out.println("수정할 총점 : ");
+                    sum = sc.nextInt();
+                    System.out.println("수정할 평균 : ");
+                    avg = sc.nextDouble();
+                    System.out.println("수정할 성적 : ");
+                    grade = sc.next();
+
+                    ScoreDto updateDto = new ScoreDto(name, kor, eng, math, sum, avg, grade);
+                    int res = biz.update(updateDto);
+                    if (res > 0) {
+                        System.out.println("수정 성공 !");
+                    } else {
+                        System.out.println("수정 실패..");
+                    }
                     break;
                 case 5:
+                    System.out.println("삭제하고자 하는 이름 입력 : ");
+                    name = sc.next();
+
+                    int deleteRes = biz.delete(name);
+                    if (deleteRes > 0) {
+                        System.out.println("삭제 성공!");
+                    } else {
+                        System.out.println("삭제 실패...");
+                    }
                     break;
                 case 6:
+                    System.out.println("프로그램을 종료합니다 ...");
                     break;
             }
         }

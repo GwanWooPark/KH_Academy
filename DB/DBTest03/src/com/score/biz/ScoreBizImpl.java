@@ -15,21 +15,25 @@ public class ScoreBizImpl implements ScoreBiz {
 
     @Override
     public ScoreDto selectOne(String s_name) {
-        return null;
+
+        return dao.selectOne(s_name);
     }
 
     @Override
     public int insert(ScoreDto dto) {
-        return 0;
+
+        return dao.insert(dto);
     }
 
     @Override
     public int update(ScoreDto dto) {
-        return 0;
+
+        return dao.update(dto);
     }
 
     @Override
-    public int delete(ScoreDto dto) {
-        return 0;
+    public int delete(String name) {
+
+        return dao.delete(name);
     }
 }

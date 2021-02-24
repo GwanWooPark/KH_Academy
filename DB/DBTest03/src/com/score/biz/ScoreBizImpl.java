@@ -1,5 +1,6 @@
 package com.score.biz;
 
+import com.score.dao.ScoreDao;
 import com.score.dto.ScoreDto;
 
 import java.util.List;
@@ -8,7 +9,8 @@ public class ScoreBizImpl implements ScoreBiz {
 
     @Override
     public List<ScoreDto> selectList() {
-        return null;
+
+        return dao.selectList();
     }
 
     @Override

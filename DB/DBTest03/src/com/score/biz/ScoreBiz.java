@@ -1,10 +1,14 @@
 package com.score.biz;
 
+import com.score.dao.ScoreDao;
+import com.score.dao.ScoreDaoImpl;
 import com.score.dto.ScoreDto;
 
 import java.util.List;
 
 public interface ScoreBiz {
+
+    ScoreDaoImpl dao = new ScoreDaoImpl(); // 뭐지
 
     public List<ScoreDto> selectList();
 

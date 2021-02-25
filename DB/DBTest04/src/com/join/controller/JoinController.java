@@ -61,6 +61,35 @@ public class JoinController {
                     break;
                 case 3:
                     System.out.println("추가");
+                    System.out.println("추가할 이름 : ");
+                    String name = sc.next();
+                    System.out.print("국어 점수 : ");
+                    int kor = sc.nextInt();
+                    System.out.print("영어 점수 : ");
+                    int eng = sc.nextInt();
+                    System.out.print("수학 점수 : ");
+                    int math = sc.nextInt();
+                    JoinDto insertScore = new JoinDto(name, kor, eng, math);
+                    int insertScore_res = biz.insertScore(insertScore);
+                    System.out.print("나이 : ");
+                    int age = sc.nextInt();
+                    System.out.print("성벌 : ");
+                    String gender = sc.next();
+                    System.out.print("위치 : ");
+                    String loc = sc.next();
+                    System.out.print("직업 : ");
+                    String job = sc.next();
+                    System.out.print("번호 : ");
+                    String tel = sc.next();
+                    System.out.print("이메일 : ");
+                    String email = sc.next();
+                    JoinDto insertMember = new JoinDto(0, name, age, gender, loc, job, tel, email);
+                    int insertMember_res = biz.insertMember(insertMember);
+                    if (insertScore_res > 0) {
+                        System.out.println("점수 추가 성공!");
+                    } else {
+                        System.out.println("추가 실패!");
+                    }
                     break;
                 case 4:
                     System.out.println("수정");

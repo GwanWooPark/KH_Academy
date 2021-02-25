@@ -20,18 +20,65 @@ public class JoinBizImpl implements JoinBiz {
     }
 
     @Override
-    public int insert(JoinDto dto) {
-        return dao.insert(dto);
+    public int insertScore(JoinDto dto) {
+
+        int sum = this.getSum(dto.getS_kor(), dto.getS_eng(), dto.getS_math());
+        double avg = this.getAvg(sum);
+        String grade = this.getGrade(avg);
+        dto.setS_sum(sum);
+        dto.setS_avg(avg);
+        dto.setS_grade(grade);
+
+        return dao.insertScore(dto);
     }
 
     @Override
-    public int update(JoinDto dto) {
-        return dao.update(dto);
+    public int updateScore(JoinDto dto) {
+        return dao.updateScore(dto);
     }
 
     @Override
-    public int delete(int m_no) {
-        return dao.delete(m_no);
+    public int deleteScore(String name) {
+        return dao.deleteScore(name);
+    }
+
+    @Override
+    public int insertMember(JoinDto dto) {
+        return dao.insertMember(dto);
+    }
+
+    @Override
+    public int updateMember(JoinDto dto) {
+        return dao.updateMember(dto);
+    }
+
+    @Override
+    public int deleteMember(String name) {
+        return dao.deleteMember(name);
+    }
+
+    public int getSum(int kor, int eng, int math) {
+        return kor + eng + math;
+    }
+
+    public double getAvg(int sum) {
+        return (double)sum / 3.0D;
+    }
+
+    public String getGrade(double avg) {
+        switch((int)avg / 10) {
+            case 6:
+                return "D";
+            case 7:
+                return "C";
+            case 8:
+                return "B";
+            case 9:
+            case 10:
+                return "A";
+            default:
+                return "F";
+        }
     }
 
     @Override

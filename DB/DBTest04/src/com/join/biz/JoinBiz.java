@@ -10,11 +10,17 @@ public interface JoinBiz {
 
     public JoinDto selectOne(int m_no);
 
-    public int insert(JoinDto dto);
+    public int insertScore(JoinDto dto);
 
-    public int update(JoinDto dto);
+    public int updateScore(JoinDto dto);
 
-    public int delete(int m_no);
+    public int deleteScore(String name);
+
+    public int insertMember(JoinDto dto);
+
+    public int updateMember(JoinDto dto);
+
+    public int deleteMember(String name);
 
     public JoinDto topNproc(int n);
 

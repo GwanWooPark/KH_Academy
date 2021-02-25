@@ -26,6 +26,35 @@ public class JoinDto {
 
     // 생성자
 
+
+    public JoinDto(String s_name, int s_kor, int s_eng, int s_math) {
+        this.s_name = s_name;
+        this.s_kor = s_kor;
+        this.s_eng = s_eng;
+        this.s_math = s_math;
+    }
+
+    public JoinDto(String s_name, int s_kor, int s_eng, int s_math, int s_sum, double s_avg, String s_grade) {
+        this.s_name = s_name;
+        this.s_kor = s_kor;
+        this.s_eng = s_eng;
+        this.s_math = s_math;
+        this.s_sum = s_sum;
+        this.s_avg = s_avg;
+        this.s_grade = s_grade;
+    }
+
+    public JoinDto(int m_no, String m_name, int m_age, String m_gender, String m_location, String m_job, String m_tel, String m_email) {
+        this.m_no = m_no;
+        this.m_name = m_name;
+        this.m_age = m_age;
+        this.m_gender = m_gender;
+        this.m_location = m_location;
+        this.m_job = m_job;
+        this.m_tel = m_tel;
+        this.m_email = m_email;
+    }
+
     public JoinDto(int m_no, String m_name, int m_age, String m_gender, String m_location, String m_job,
                    String m_tel, String m_email, String s_name, int s_kor, int s_eng, int s_math, int s_sum,
                    double s_avg, String s_grade) {

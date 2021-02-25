@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ScoreBiz {
 
-    ScoreDaoImpl dao = new ScoreDaoImpl();
+
 
     public List<ScoreDto> selectList();
 
@@ -20,4 +20,5 @@ public interface ScoreBiz {
 
     public int delete(String name);
 
+    public ScoreDto topNproc(int n);
 }

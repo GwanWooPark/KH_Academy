@@ -15,7 +15,7 @@ public interface ScoreDao {
                             " WHERE S_NAME = ? ";
 
     String INSERT_SQL = " INSERT INTO SCORE " +
-                        " VALUES(?, ?, ?, ?, ?, ?, ?)";
+                        " VALUES(?, ?, ?, ?, ?, ?, ?) ";
 
     String UPDATE_SQL = " UPDATE SCORE " +
                         " SET S_KOR = ?, S_ENG = ?, S_MATH = ?, S_SUM = ?, S_AVG = ?, S_GRADE = ? " +
@@ -23,6 +23,16 @@ public interface ScoreDao {
 
     String DELETE_SQL = " DELETE FROM SCORE " +
                         " WHERE S_NAME = ? ";
+
+    String TOP_N_SQL = " SELECT * " +
+            "FROM (SELECT ROWNUM AS R, S_NAME, S_KOR, S_ENG, S_MATH, S_SUM, S_AVG, S_GRADE " +
+            "      FROM (SELECT S_NAME, S_KOR, S_ENG, S_MATH, S_SUM, S_AVG, S_GRADE " +
+            "            FROM SCORE " +
+            "            ORDER BY S_SUM DESC) " +
+            "          A " +
+            "    )B " +
+            "WHERE R = ? ";
+
 
     public List<ScoreDto> selectList();
 
@@ -34,4 +44,5 @@ public interface ScoreDao {
 
     public int delete(String s_name);
 
+    public ScoreDto topNproc(int n);
 }

@@ -69,6 +69,7 @@ public class ScoreDaoImpl implements ScoreDao{
         try {
             pstm = con.prepareStatement(SELECT_ONE_SQL);
             pstm.setString(1, s_name); // ? 에 들어갈 값을 설정해준다.
+
             // 4.
             rs = pstm.executeQuery(); // 그 후에 쿼리를 실행 값을 받아옴
             while (rs.next()) {
@@ -173,6 +174,7 @@ public class ScoreDaoImpl implements ScoreDao{
         // 2.
         Connection con = getConnection();
 
+        // 3.
         PreparedStatement pstm = null;
         int res = 0;
         try {
@@ -189,5 +191,35 @@ public class ScoreDaoImpl implements ScoreDao{
         }
 
         return res;
+    }
+
+    @Override
+    public ScoreDto topNproc(int n) {
+
+        // 1.
+        // 2.
+        Connection con = getConnection();
+
+        // 3.
+        PreparedStatement pstm = null;
+        ResultSet rs = null;
+        ScoreDto dto = null;
+
+        try {
+            pstm = con.prepareStatement(TOP_N_SQL);
+            pstm.setInt(1, n);
+
+            // 4.
+            rs = pstm.executeQuery();
+            while (rs.next()) {
+                dto = new ScoreDto(rs.getString(2),rs.getInt(3), rs.getInt(4),
+                        rs.getInt(5),rs.getInt(6),rs.getDouble(7),rs.getString(8));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+
+        return dto;
     }
 }

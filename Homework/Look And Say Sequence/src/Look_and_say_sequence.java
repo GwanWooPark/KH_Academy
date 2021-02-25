@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class LASS {
+class LASS {
     /*
        1		-- 1
        11		-- 1이 한개
@@ -23,7 +23,6 @@ public class LASS {
         line = scanner.nextInt();
 
         lass(line);
-
 
     }
 

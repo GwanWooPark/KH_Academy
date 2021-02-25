@@ -13,6 +13,13 @@ public class ScoreDto {
     public ScoreDto() {
     }
 
+    public ScoreDto(String s_name, int s_kor, int s_eng, int s_math) {
+        this.s_name = s_name;
+        this.s_kor = s_kor;
+        this.s_eng = s_eng;
+        this.s_math = s_math;
+    }
+
     public ScoreDto(String s_name, int s_kor, int s_eng, int s_math, int s_sum, double s_avg, String s_grade) {
         this.s_name = s_name;
         this.s_kor = s_kor;
@@ -81,14 +88,12 @@ public class ScoreDto {
 
     @Override
     public String toString() {
-        return "ScoreDto{" +
-                "s_name = '" + s_name + '\'' +
-                ", s_kor = " + s_kor +
-                ", s_eng = " + s_eng +
-                ", s_math =" + s_math +
-                ", s_sum = " + s_sum +
-                ", s_avg = " + s_avg +
-                ", s_grade = '" + s_grade + '\'' +
-                '}';
+        return "[" + "s_name = '" + s_name +"]" +
+                "\t , s_kor = " + s_kor +
+                "\t , s_eng = " + s_eng +
+                "\t , s_math =" + s_math +
+                "\t , s_sum = " + s_sum +
+                "\t , s_avg = " + s_avg +
+                "\t , s_grade = '" + s_grade;
     }
 }

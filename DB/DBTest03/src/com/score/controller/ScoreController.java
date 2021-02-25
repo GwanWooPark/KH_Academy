@@ -22,7 +22,10 @@ public class ScoreController {
                 .append("3. 추    가\n")
                 .append("4. 수    정\n")
                 .append("5. 삭    제\n")
-                .append("6. 종    료\n")
+                .append("5. 삭    제\n")
+                .append("6. 1등 출력\n")
+                .append("7. 2등 출력\n")
+                .append("8. 3등 출력\n")
                 .append("input select \n");
         System.out.println(sb);
 
@@ -37,7 +40,7 @@ public class ScoreController {
 
         int select = 0;
 
-        while (select != 6) {
+        while (select != 9) {
             select = getMenu();
 
             switch (select) {
@@ -65,15 +68,7 @@ public class ScoreController {
                     int eng = sc.nextInt();
                     System.out.print("수학 점수 : ");
                     int math = sc.nextInt();
-                    System.out.print("총점 : ");
-                    int sum = sc.nextInt();
-                    System.out.print("평균 : ");
-                    double avg = sc.nextDouble();
-                    System.out.print("성적 : ");
-                    String grade = sc.next();
-
-                    ScoreDto insertDto = new ScoreDto(name, kor, eng, math, sum, avg, grade);
-
+                    ScoreDto insertDto = new ScoreDto(name, kor, eng, math);
                     int insertRes = biz.insert(insertDto);
                     if (insertRes > 0) {
                         System.out.println("추가 성공");
@@ -90,14 +85,8 @@ public class ScoreController {
                     eng = sc.nextInt();
                     System.out.println("수정할 수학 점수 : ");
                     math = sc.nextInt();
-                    System.out.println("수정할 총점 : ");
-                    sum = sc.nextInt();
-                    System.out.println("수정할 평균 : ");
-                    avg = sc.nextDouble();
-                    System.out.println("수정할 성적 : ");
-                    grade = sc.next();
 
-                    ScoreDto updateDto = new ScoreDto(name, kor, eng, math, sum, avg, grade);
+                    ScoreDto updateDto = new ScoreDto(name, kor, eng, math);
                     int res = biz.update(updateDto);
                     if (res > 0) {
                         System.out.println("수정 성공 !");
@@ -117,6 +106,21 @@ public class ScoreController {
                     }
                     break;
                 case 6:
+                    System.out.println("1등 출력!");
+                    ScoreDto d1st = biz.topNproc(1);
+                    System.out.println(d1st);
+                    break;
+                case 7:
+                    System.out.println("2등 출력!");
+                    ScoreDto d2nd = biz.topNproc(2);
+                    System.out.println(d2nd);
+                    break;
+                case 8:
+                    System.out.println("3등 출력!");
+                    ScoreDto d3rd = biz.topNproc(3);
+                    System.out.println(d3rd);
+                    break;
+                case 9:
                     System.out.println("프로그램을 종료합니다 ...");
                     break;
             }

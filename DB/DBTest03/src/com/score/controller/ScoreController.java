@@ -14,7 +14,6 @@ public class ScoreController {
 
     public static int getMenu() {
 
-
         StringBuffer sb = new StringBuffer();
         sb.append("**********\n")
                 .append("1. 전체 출력\n")

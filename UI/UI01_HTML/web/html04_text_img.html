@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>text</h1>
+
+    <p>
+        <b>진하게(&lt;b&gt;)</b><br>
+        <strong>진하게(&lt;strong&gt;)</strong><br>
+        <i>기울임(&lt;i&gt;)</i><br>
+        <em>기울임(&lt;em&gt;)</em><br>
+        <small>작은 텍스트 표시, 코멘트 (&lt;small&gt;)</small><br>
+        윗<sup>첨자</sup>(&lt;sup&gt;)<br>
+        아래<sub>첨자</sub>(&lt;sub&gt;)<br>
+        <ins>내용 추가 (&lt;ins&gt;)</ins><br>
+        <del>내용 삭제 (&lt;del&gt;)</del>
+    </p>
+
+    <hr>
+
+    <h1>img</h1>
+
+    <img alt = "설명" src="resources/image/img01.png" width="200px", height="200px" title="이미지" />
+    <br>
+    <!--
+    px : 픽셀 (해상도 별 상대크기)
+    pt : 포인트 (1pt = 0.72인치)
+    %, em : 지정/상속 등에 대한 백분율 (상대 크기)
+    -->
+
+    <h3>이미지에 링크 걸기</h3>
+
+    <a href="index.html" title="go index">
+        <img alt = "링크" src="resources/image/4k.jpg" width="100px", height="100px" />
+    </a>
+    <br>
+
+    <h3>이미지 맵</h3>
+    <img alt = "설명" src="resources/image/4k.jpg" width="100px", height="100px" usemap="#my" />
+    <map name="my">
+        <area alt = "" shape="rect" coords="25, 25, 75, 75" href="index.html" title="index go" />
+    </map>
+</body>
+</html>

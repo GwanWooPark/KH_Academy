@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>select</h1>
+
+    <form action="#">
+        <fieldset>
+            <legend>여러줄 글 상자 &amp; 목록상자</legend>
+
+            <div>
+                <label for = "reply"></label><br>
+                <textarea rows = "3" cols="10" id = "reply" name ="re"></textarea>
+            </div>
+            <div>
+                과목선택
+                <br>
+                <select name = "sel1">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                    <option value="jq">JQuery</option>
+                </select>
+            </div>
+            <div>
+                저녁 메뉴
+                <select name =  "sel02">
+                    <optgroup label="한식">
+                        <option value="제육정식">제육정식</option>
+                        <option value="갈비찜">갈비찜</option>
+                    </optgroup>
+                    <optgroup label="중식">
+                        <option value="마라탕">마라탕</option>
+                        <option value="깐풍기">깐풍기</option>
+                    </optgroup>
+                    <optgroup label="일식">
+                        <option value="초밥">초밥</option>
+                        <option value="회">회</option>
+                    </optgroup>
+                    <optgroup label="양식">
+                        <option value="스테이크">스테이크</option>
+                        <option value="햄버거">햄버거</option>
+                    </optgroup>
+                </select>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

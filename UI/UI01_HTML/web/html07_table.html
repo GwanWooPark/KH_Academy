@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>기본 테이블 만들기</h1>
+
+    <table border="1">
+        <tr>
+            <th>컬럼 1</th>
+            <th>컬럼 2</th>   <!-- th = head 가운데 정렬 및 볼드체가 됨. -->
+        </tr>
+        <tr>
+            <td>1</td>      <!-- td = data(값) -->
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <h1>추가적인 요소 사용해서 테이블 만들기</h1>
+
+    <table border="1">
+        <caption>테이블 제목</caption>  <!-- caption = 테이블 제목 -->
+        <colgroup>                   <!-- 테이블의 칼럼에 속성 부여 -->
+            <col width="100px"/>
+            <col width="200px"/>
+            <col width="300px"/>
+        </colgroup>
+
+        <thead>                      <!-- thead는 무조건 위에 -->
+            <tr>
+                <th>column1</th>
+                <th>column2</th>
+                <th>column3</th>
+            </tr>
+        </thead>
+
+        <tbody>                      <!-- tbody는 중간에 -->
+            <tr>
+                <td>data1</td>
+                <td>data2</td>
+                <td>data3</td>
+            </tr>
+            <tr>
+                <td>data4</td>
+                <td>data5</td>
+                <td>data6</td>
+            </tr>
+            <tr>
+                <td>data7</td>
+                <td>data8</td>
+                <td>data9</td>
+            </tr>
+        </tbody>
+
+        <tfoot>                      <!-- tfoot은 마지막에 (저 위의 것들과 순서를 바꿔도 결과가 바뀌지 않음) -->
+            <tr>
+                <td>footer1</td>
+                <td>footer2</td>
+                <td>footer3</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <h1>셀 병합하기</h1>
+
+    <table border="1">
+        <tr title="칼럼">
+            <th>컬럼1</th><th>컬럼2</th><th>컬럼3</th><th>컬럼4</th>
+        </tr>
+        <tr>
+            <td colspan="4">1</td>
+        </tr>
+
+        <tr>
+            <td rowspan="3">세로(열) 합치기</td>
+            <td>6</td>
+            <td colspan="2">가로(행) 합치기</td>
+        </tr>
+
+        <tr>
+            <td>10</td>
+            <td rowspan="2">11</td>
+            <td>12</td>
+        </tr>
+
+        <tr>
+            <td>14</td>
+            <td>16</td>
+        </tr>
+    </table>
+
+</body>
+</html>

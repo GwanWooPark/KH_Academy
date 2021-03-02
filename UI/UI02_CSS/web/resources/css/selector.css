@@ -1,0 +1,107 @@
+
+/* 타입 선택자 */
+pre {
+    text-align: center;
+}
+
+h1 {
+    color: aqua;
+}
+
+ /* id 선택자 */
+#sid01 {
+    color: red;
+ }
+#sid02 {
+     background-color: blue;
+     color: white;
+ }
+#sid03 {
+    color: green;
+ }
+
+/* class 선택자 */
+
+.slcs{
+    color: silver;
+}
+
+/* 전체 선택자 */
+* {
+    padding: 0;
+    margin: 0;
+    font-variant: small-caps;
+}
+
+/* 자식 선택자 */
+#at > p {
+    color: red;
+}
+
+#at > div > p {
+    color: blue;
+}
+
+/* 하위 선택자 */
+
+div span {
+    background-color: yellow;
+}
+
+/* 인접 선택자 */
+
+h3 + b { /* h3 태그 다음번에 나오는 놈을 의미 */
+    background-color: gray;
+    color: ghostwhite;
+}
+
+span + b {
+    color: fuchsia;
+}
+
+ /* 속성 선택자 */
+p[title] {
+    background-color: yellow;
+}
+
+p[title = "b"] {
+    color: green;
+}
+
+ /* 가상 클래스 선택자*/
+a:link {
+    color: green;
+    font-size: 30pt;
+}
+a:visited {
+    color: orange;
+}
+
+a:hover { /* 마우스 가져다 대었을 때 */
+    background-color: fuchsia;
+    font-size: 40pt;
+}
+
+a:active { /* 마우스 누르는 순 */
+    background-color: lime;
+    color: black;
+}
+input:checked {
+    width: 100px;
+    height: 100px;
+}
+
+/* 종속 선택 */
+li.scls01 {
+    background-color: purple;
+}
+li.scls02#sidul{
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+/* 그룹 선택 */
+p, pre, strong{
+    color: teal;
+}
+

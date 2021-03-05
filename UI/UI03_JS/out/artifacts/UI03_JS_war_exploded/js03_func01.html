@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+
+        function alertTest() {
+            // 경고, 혹은 간단한 디버깅용으로 주로 사용
+            alert("내용-단순 대화창");
+        }
+
+        function confirmTest() {
+            // 확인/취소 버튼을 제공 - true/false를 리턴
+            if (confirm("배경을 파란색?")) {
+                document.body.style.backgroundColor = "blue";
+            } else {
+                document.body.style.backgroundColor = "";
+            }
+
+        }
+
+        function promptTest() {
+            // 텍스트 박스, 확인, 취소 제공. - 확인을 누르면 텍스트 박스의 값 리턴 / 취소는 null 리턴
+            var txt = prompt("좋아하는 과목의 숫자를 써주세요 \n[1: Java 2: DB 3: HTML/CSS 4: JavaScript ");
+
+            switch (txt) {
+                case "1":
+                    alert("JAVA가 최고");
+                    break;
+                case "2":
+                    alert("DB가 최고");
+                    break;
+                case "3":
+                    alert("HTML/CSS 가 최고");
+                    break;
+                case "4":
+                    alert("JavaScript가 최고");
+                    break;
+                case null:
+                    alert("다 싫다");
+                    break;
+                default :
+                    alert("1,2,3,4중 하나");
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>window 객체가 제공하는 대화형 함수</h1>
+
+    <small>
+        <strong>종류에는 alert(), confirm(), prompt()가 있다.</strong>
+    </small>
+
+    <p>
+        alert();
+        <button onclick="alertTest();">클릭</button>
+    </p>
+
+    <p>
+        confirm();
+        <button onclick="confirmTest();">클릭</button>
+    </p>
+
+    <p>
+        prompt();
+        <button onclick="promptTest();">클릭</button>
+    </p>
+</body>
+</html>

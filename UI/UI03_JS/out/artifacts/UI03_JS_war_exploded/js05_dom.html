@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        function searchId() {
+            var doc = document.getElementById("test");
+            doc.innerHTML = "id로 탐색";
+            doc.style.color = "red";
+        }
+
+        function searchName() {
+            // node list (저장된 형태는 배열)
+            var doc = document.getElementsByName("test02");
+            doc[1].value = "굿";
+        }
+
+        function searchTagName() {
+            var doc = document.getElementsByTagName("p");
+            doc[3].innerHTML = "tagName으로 탐색";
+            doc[3].style.color = "blue";
+        }
+
+        function searchQS() {
+            //var doc = document.querySelectorAll("#test");
+            //doc[0].innerHTML = "querySelectAll(css 선택자)";
+
+            var doc = document.querySelector("#test");
+            doc.innerHTML = "querySelector(css 선택자)";
+
+            /*
+                두개의 차이
+                위에꺼는 노드 리스트로
+                아래꺼는 하나만 가지고옴
+             */
+
+        }
+    </script>
+    <!--
+         Document -> html
+         Object   -> tag를 js 객체로 바꾸는
+         Model    -> 모델
+
+         -> html(문자)에 있는 태그를 자바스크립트 객체로 바꿔주는 모델
+         -> String을 Object로 바꾸는 모델
+     -->
+</head>
+<body>
+
+    <p onclick="searchQS();">DOM 탐색 메서드</p>
+
+    <p id = "test" onclick="searchId();">1. Element의 id로 탐색 - 리턴 : 값 하나</p> <!-- id 속성은 유일한 하나.-->
+    <p onclick="searchName();">
+        2. Element의 name으로 탐색 - 리턴 : 배열(node list)<br>
+        <input type="text" name="test02" value=""><br>
+        <input type="text" name="test02" value=""><br>
+        <input type="text" name="test02" value=""><br>
+    </p>
+
+    <p onclick="searchTagName()">3. Element의 태그이름으로 탐색 - 리턴 : 배열 (node list)</p>
+</body>
+</html>

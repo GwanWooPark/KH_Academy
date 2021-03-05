@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+        #circle {
+            border: 1px solid red;
+            display: none;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+        function randomNum() {
+            var rnum = Math.floor(Math.random() * 45 + 1);
+            document.getElementById("rnum").value = rnum;
+        }
+
+        function randomBgColor() {
+            // style 색상 표현 : rgb(256, 256, 256) - 0~255
+
+            var rnum = function () {
+                return Math.floor(Math.random() * 256);
+            };
+
+            document.body.style.backgroundColor = "rgb(" + rnum() + "," + rnum() + "," + rnum() + ")";
+        }
+
+        function circleView() {
+
+            var rnum = Math.floor(Math.random() * 200);
+            var circle = document.getElementById("circle");
+
+            circle.style.width = rnum + "px";
+            circle.style.height = rnum + "px";
+
+            circle.style.borderRadius = Math.floor(rnum / 2) + "px";
+            circle.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+    <h1>랜덤 숫자 생성하기</h1>
+    숫자 :
+    <input type="text" id = "rnum" readonly = "readonly">
+    <input type="button" value="난수발생" onclick="randomNum();">
+
+    <h1>랜덤으로 배경색 설정하기</h1>
+    <input type="button" value="배경색" onclick="randomBgColor()">
+
+    <h1>원 만들기</h1>
+    <input type="button" value="원 만들기" onclick="circleView();">
+    <div id = "circle"></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>원의 넓이, 원의 둘레</h1>
+    <input type="button" value="넓이/둘레" onclick="circleArea();">
+    <br>
+    넓이 : <span id = "area"></span><br>
+    둘레 : <span id = "len"></span><br>
+
+    <script type="text/javascript">
+
+        function circleArea() {
+
+            var circleWidth = document.getElementById("circle").style.width;
+            var r = Math.floor(parseInt(circleWidth) / 2);
+            var area = Math.PI * Math.pow(r, 2);
+            var len = Math.PI * 2 * r;
+
+            document.getElementById("area").innerHTML = Math.round(area);
+            document.getElementById("len").innerHTML = Math.round(len);
+            // innerHTML 시작 태그와 끝 태그사이에 넣어준다.
+        }
+    </script>
+</body>
+</html>

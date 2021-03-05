@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- 외부 링크 방식 이 방식은 script사이에 아무 것도 넣으면 안딤 -->
+    <script type="text/javascript" src = "resource/js/test.js"></script>
+
+
+    <!-- 내부 링크 방식 -->
+    <script type="text/javascript">
+        function embeddedTest() {
+            var doc = document.getElementsByTagName("li")[1];
+            doc.style.color = "red";
+            doc.innerHTML = "<strong> 글자가 바뀝니다 </strong>"
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>자바스크립트 작성방식</h1>
+    <ol>
+        <!-- inline -->
+        <li onclick="alert('inline')">inline 방식</li>
+        <li onclick="embeddedTest();">내부 작성 방식</li>
+        <li onclick="test();">외부 링크 방식</li>
+    </ol>
+
+</body>
+</html>

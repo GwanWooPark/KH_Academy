@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+
+        // 객체 1
+        function myClass() {
+            this.name = "kh정보교육원";          // 외부에서 접근 가능
+            var name02 = "qclass";            // 외부에서 접근 불가
+            this.getName02 = function () {    // closure 내부 함수에서 외부 변수 접근
+                return name02;
+            };
+        }
+
+        // 객체2
+        // 객체 리터럴 (리터럴 객체)
+        var yourClass = {
+            name: "kh정보 교육원",
+            print: function () {
+                alert(yourClass.name + " qclass");
+            }
+        }
+
+        // prototype
+        myClass.prototype.print = function () { // prototype = (기능)확장
+            var tmp = "프로토타입";
+            alert(this.name + tmp + this.getName02() + tmp);
+        };
+
+        function objectTest() {
+            var qclass = new myClass();
+            alert(qclass.name);
+            alert(qclass.name02);
+            alert(qclass.getName02());
+
+            alert(yourClass.name);
+            yourClass.print();
+
+            qclass.print();
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <pre>
+        객체의 구성
+        - 메서드 : 기능 정의
+        - 속성 : 객체 내부 데이터
+        - this : 객체 내부의 메서드나 속성을 정의할 때 사용
+        - 프로토 타입 : 객체의 확장
+    </pre>
+
+    <button onclick="objectTest();">클릭</button>
+
+</body>
+</html>

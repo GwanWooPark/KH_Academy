@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+
+        function numTest(val) {
+            var val  = Number(val) + 100;
+            alert(val + typeof (val));
+
+        }
+
+        function intTest(val) {
+            var val = parseInt(val) + 100;
+            alert(val + typeof (val));
+        }
+
+        function floatTest(val) {
+            var val = parseFloat(val) + 100;
+            alert(val + typeof (val));
+        }
+
+        function evalTest() {
+            var val = document.getElementsByName("evalue")[0];
+
+            if (confirm("작성한 코드가 맞나? : " + val.value)) {
+                document.getElementsByTagName("span")[0].innerHTML += "<b> 계산결과 : " + eval(val.value) + "</b>";
+            }
+
+            // eval 안에 수식 형태로된 문자열이 들어가면 값을 계산해준다.
+            // 근데 사용 안하는게 좋음(보안적으로 취약하기 때문)
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>형 변환</h1>
+
+    <h2>1. 숫자형 형변환 : number()</h2>
+    <input type="text" id = "num">
+    <button onclick="numTest(num.value);">클릭</button>
+
+    <h2>2. 정수형 형변환 : parseInt()</h2>
+    <input type="text" id = "int">
+    <button onclick="intTest(int.value);">클릭</button>
+
+    <h2>3. 실수형 형변환 : parsefloat()</h2>
+    <input type="text" id = "float">
+    <button onclick="floatTest(float.value)">클릭</button>
+
+    <h2>검증 함수 : eval()</h2>
+    <p>문자열로 된 코드(수식)을 자바스크립트로 읽어들여서 실행</p>
+    <input type="text" name = "evalue" placeholder="예) 5 + 10">
+    <button onclick="evalTest();">클릭</button>
+    <span></span>
+    <hr>
+
+    <input type="number" class = "mycalc">
+    <input type="text" list="cal" class = "mycalc">
+    <datalist id="cal">
+        <option value="+"></option>
+        <option value="-"></option>
+        <option value="*"></option>
+        <option value="/"></option>
+    </datalist>
+
+    <input type="number" class = "mycalc">
+    <button onclick="calc();">계산</button>
+    <span></span>
+
+    <script type="text/javascript">
+
+        function calc() {
+            var calc = document.querySelectorAll(".mycalc");
+            var res = "";
+            for (var i = 0; i < calc.length; i++) {
+                res += calc[i].value;
+            }
+
+            document.getElementsByTagName("span")[1].innerHTML = eval(res);
+        }
+    </script>
+</body>
+</html>

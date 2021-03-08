@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>팝업창</title>
+
+<script type="text/javascript">
+	function test(){
+		var val=document.getElementsByName("test")[0].value;
+
+		// opener : 팝업창을 띄운 부모창과 팝업창(자식창) 간의 함수 호출 및 값 전달.
+		opener.document.getElementsByTagName("h1")[1].innerHTML=val;
+		close();
+		// 이름이 test인 항목의 값을 받아와서 h1태그의 [1]에 innerHTML로 값을 넣어준다.
+		// [1]부분이 팝업창 만들기 부분
+
+	}
+</script>
+
+</head>
+<body>
+	<input type="text" name="test"/>
+	<input type="button" onclick="test()" value="전달"/>
+	<input type="button" onclick="self.close()" value="창닫기">
+</body>
+</html>

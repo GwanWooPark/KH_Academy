@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.div2 {
+
+    position: sticky;
+    top: 0;
+}
+

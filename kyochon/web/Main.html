@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>교촌치킨</title>
+
+    <link href="resources/css/stylesheet.css" rel = "stylesheet" type="text/css">
+    <script type="text/javascript">
+        var num = 1;
+        function prevImg() {
+            num --;
+            if (num < 1) {
+                num = 3;
+            }
+
+            document.getElementById("event_gallery").src = "resources/img/" + num + ".jpg";
+            return false;
+        }
+
+        function nextImg() {
+            num++;
+
+            if (num > 3) {
+                num = 1;
+            }
+            document.getElementById("event_gallery").src = "resources/img/" + num + ".jpg";
+            return false;
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <span class="span1"><a href="#">교촌치킨</a></span>
+        <span class = "span2"><a href="#">교촌 F&B</a></span>
+
+        <span class="subHeader"><a href="#">고객센터</a></span>
+        <span class="subHeader" style="font-weight: lighter; color: rgb(160, 145, 135)">|</span>
+        <span class="subHeader"><a href="#">사이트맵</a></span>
+        <span class="subHeader" style="font-weight: lighter; color: rgb(160, 145, 135)">|</span>
+        <span class="subHeader"><a href="#">가맹점 개설안내</a></span>
+    </div>
+
+    <div>
+        <span>
+        <img src="resources/img/logo.png" id = "logo" alt="logo">
+        </span>
+        <span class = "menu">
+            <button class="menuBtn"><a href="#">메뉴</a></button>
+            <span class="menu-content">
+                <a href="#">치킨</a><hr>
+                <a href="#">사이드</a><hr>
+                <a href="#">버거</a><hr>
+                <a href="#">상품권</a>
+            </span>
+        </span>
+        <span id = line1>
+            |
+        </span>
+        <span class = "loc">
+            <button class = "locBtn"><a href="#">매장안내</a></button>
+            <span class="loc-content">
+                <a href="#">국내매장</a><hr>
+                <a href="#">해외매장</a>
+            </span>
+        </span>
+        <span id = line2>
+            |
+        </span>
+        <span class = "with">
+             <button class = "withBtn"><a href="#">with교촌</a></button>
+             <span class="with-content">
+                 <a href="#">나만의레시피</a><hr>
+                 <a href="#">행복 채움 프로젝트</a>
+             </span>
+         </span>
+         <span id = line3>
+             |
+         </span>
+         <span class = "story">
+             <button class = "storyBtn"><a href="#">교촌스토리</a></button>
+             <span class="story-content">
+                 <a href="#">교촌스토리</a><hr>
+                 <a href="#">CEO 인사말</a><hr>
+                 <a href="#">PR센터</a><hr>
+                 <a href="#">공지사항</a>
+             </span>
+         </span>
+     </div>
+     <div>
+         <a href="#" onclick="return prevImg();" id ="prev">
+             <img alt="left_btn" src="http://www.kyochon.com/images/btn_bx_prev5.png">
+         </a>
+         <a href="#">
+             <img id = "event_gallery" onload="timeImg();" alt="갤러리" src="resources/img/1.jpg">
+         </a>
+         <a href="#" onclick="nextImg();" id="next">
+             <img alt="right_btn" src="http://www.kyochon.com/images/btn_bx_next5.png">
+         </a>
+     </div>
+
+     <div>
+         <img alt = "img1" id = "img1" src="resources/img/4.jpg">
+     </div>
+    <span>
+        <img id = "best" alt ="best_menu" src="http://www.kyochon.com/images/main/icon_bestMenu.png">
+         <img alt = "img2" id = "img2" src="resources/img/5.jpg">
+    </span>
+    <span>
+        <img id = "hot" alt ="hot_menu" src="http://www.kyochon.com/images/main/icon_hotMenu.png">
+         <img alt = "img3" id = "img3" src="resources/img/6.jpg">
+    </span>
+    <span>
+         <img alt = "img4" id = "img4" src="resources/img/7.png">
+         <form action="#" method="post">
+             <input type="text" id = "search_box">
+             <input type=submit id = "submit" value="검색">
+         </form>
+        <span id = "map"><a href="#">지도보기</a></span>
+        <span id = "watch"><a href="#">상세보기</a></span>
+    </span>
+
+    <div id = "mint">
+        <img id = "news_img" alt = 'news' src="http://www.kyochon.com/images/main/icon_news.gif">
+        <div id = "plus">
+           <a href="#">+</a>
+        </div>
+        <div>
+            <a href="#">
+                <span>
+                    <img alt="공지1" src="resources/img/4.jpg" class = "news">
+                </span>
+                <span class="txt">공지1</span>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <span>
+                    <img alt="공지2" src="resources/img/4.jpg" class = "news">
+                </span>
+                <span class="txt">
+                    공지 2 제목
+                </span>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <span>
+                    <img alt="공지1" src="resources/img/4.jpg" class = "news">
+                </span>
+                <span class="txt">
+                    공지 1 제목
+                </span>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <span>
+                    <img alt="공지2" src="resources/img/4.jpg"  class = "news">
+                </span>
+                <span class="txt">
+                    공지 2 제목
+                </span>
+            </a>
+        </div>
+    </div>
+
+    <div id = "chain">
+        <div>
+            <p id = "chain_txt">가맹점 개설 안내</p>
+            <p>교촌 F&B의 가족으로 모시고자 합니다.</p>
+            <p id = "focus"><a href="#">자세히 보기</a></p>
+        </div>
+    </div>
+
+    <div>
+        <img alt ="gaesul" src="resources/img/8.png" width="700px" id = "gaesul">
+        <span><a href="#" id="link1">개설절차</a></span>
+        <span><a href="#" id="link2">인테리어</a></span>
+        <span><a href="#" id="link3">지역별 상담창</a></span>
+    </div>
+
+    <div class="sns">
+        <a href="#">
+            <img alt = "fb" src="resources/img/fb.png" width="50px" height="50px">
+        </a>
+        <a href="#">
+            <img alt = "star" src="resources/img/star.png" width="50px" height="50px">
+        </a>
+        <a href="#">
+            <img alt = "you" src="resources/img/you.png" width="50px" height="50px">
+        </a>
+    </div>
+    <hr>
+    <div id = "info">
+        <a href="#">이용약관</a>
+        &nbsp;|&nbsp;
+        <a href="#" style="color: rgb(224, 153, 64)">개인정보처리방침</a>
+        &nbsp;|&nbsp;
+        <a href="#">이메일 무단수집거부</a>
+        &nbsp;|&nbsp;
+        <a href="#">찾아오시는 길</a>
+    </div>
+    <div id = "small_sns">
+        <a href="#">
+            <img alt ="fb" src="resources/img/fb.png" width="23px" height="23px">
+        </a>
+        <a href="#">
+            <img alt ="fb" src="resources/img/star.png" width="23px" height="23px">
+        </a>
+        <a href="#">
+            <img alt="fb" src="resources/img/you.png" width="23px" height="23px">
+        </a>
+    </div>
+    <div>
+        <img id = "call" alt="call" src="resources/img/call.png" width="200px" height="25px">
+    </div>
+    <div>
+        <img id = "gamang" alt="gamang" src="resources/img/gamang.png" width="140px"height="40px">
+    </div>
+    <div id = "last_txt">
+        사업장소재지 : 39852 경상북도 칠곡군 가산면 송신로 78 | 본사(오산교육원)주소 : 18150 경기도 오산시 동부대로 436번길 55-18 | 상호명 : 교촌에프앤비(주) | 대표이사 : 소진세, 황학수<br>
+        대표번호 : 031-371-3500 | 소비자상담번호 : 080-320-3000 | 사업자등록번호 : 513-81-16574 | 통신판매업신고 : 2012-경상북도칠곡-00023호 | 개인정보보호책임자 : 윤순도 | 영업시간 : 12:00~23:30<br>
+        Copyright 2015 © KYOCHON F&B. All rights reserved.
+    </div>
+</body>
+</html>

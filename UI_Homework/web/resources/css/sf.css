@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.line_bar {
+    position: relative;
+    background-color: rgb(38,41,46);
+    height: 62px;
+
+}
+#logo {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 35px;
+    width: 40px;
+    height: 40px;
+}
+
+input::placeholder {
+    font-size: 10.5pt;
+    color: rgb(200,201,203)
+}
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none; color: white}
+a:hover {text-decoration: none; color: gray}
+
+#search_box {
+    margin-right: 1088px;
+    margin-top: 16px;
+    float: right;
+    width: 267px;
+    height: 28px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(70,77,85);
+    background-color: rgb(38,41,46);
+}
+
+@font-face {
+    font-family: "gitGothic";
+    src: url("../../font/TTInterfaces-Medium.otf") format("truetype");
+
+}
+
+.pulls {
+    margin-top: 23px;
+    position: absolute;
+    margin-left: 368px;
+    float: right;
+    color: white;
+    font-size: 11pt;
+    font-family: gitGothic;
+}
+.issues {
+    margin-top: 24px;
+    position: absolute;
+    margin-left: 472px;
+    float: right;
+    color: white;
+    font-size: 11pt;
+    font-family: gitGothic;
+}
+.marketplace {
+    margin-top: 24px;
+    position: absolute;
+    margin-left: 530px;
+    float: right;
+    color: white;
+    font-size: 11pt;
+    font-family: gitGothic;
+}
+.explore {
+    margin-top: 24px;
+    position: absolute;
+    margin-left: 630px;
+    float: right;
+    color: white;
+    font-size: 11pt;
+    font-family: gitGothic;
+}
+
+.ring{
+    margin-top: 18px;
+    position: absolute;
+    float: right;
+    margin-left: 1292px;
+}
+
+.plus {
+    margin-top: 18px;
+    position: absolute;
+    float: right;
+    margin-left: 1328px;
+}
+
+.mymenu{
+    margin-top: 18px;
+    position: absolute;
+    float: right;
+    margin-left: 1371px;
+}
+
+
+#plus_dropdown{
+    width: 9.5em;
+    position: relative;
+    left: -120px;
+    border-radius: 10px;
+    border-width: thin;
+    border-color: rgb(204, 205, 209);
+    background-color: white;
+    border-style: solid;
+    text-align: start;
+    display: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.plus_m {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.plus_m > a {
+    color: black;
+    font-family: "-3윤고딕";
+    font-size: 11pt;
+}
+
+.plus_m:hover{
+    color: white;
+    background-color: rgb(43, 100, 207);
+}
+.plus_m>a:hover{
+    color: white;
+    background-color: rgb(43, 100, 207);
+}
+
+#my_dropdown {
+    width: 11em;
+    position: relative;
+    left: -140px;
+    border-radius: 10px;
+    border-width: thin;
+    border-color: rgb(204, 205, 209);
+    background-color: white;
+    border-style: solid;
+    text-align: left;
+    display: none;
+}
+
+.my_m {
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+
+.my_m > a {
+
+    color: black;
+    font-family: "-3윤고딕";
+    font-size: 11pt;
+}
+
+.my_m:hover{
+    color: white;
+    background-color: rgb(43, 100, 207);
+}
+.my_m>a:hover{
+    color: white;
+    background-color: rgb(43, 100, 207);
+}
+
+#status {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(204, 205, 209);
+    border-width: thin;
+    width: 9em;
+    margin-left: 15px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+#stat {
+    position: relative;
+    float: right;
+    margin-top: 5px;
+    margin-right: 50px;
+    color: rgb(91, 97, 106);
+}
+
+#stat:hover {
+    color: rgb(43 ,100, 207);
+}

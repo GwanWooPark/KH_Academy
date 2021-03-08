@@ -1,0 +1,190 @@
+* { margin: 0; padding: 0; }
+a{text-decoration: none; color:black;}
+
+.span1 {
+    color: white;
+    margin-left: 30px;
+    background-color: rgb(180, 152, 107);
+    padding: 10px 28px 9px 28px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 9pt;
+    border: none;
+}
+.span1 a:visited {text-decoration: none; color: white}
+
+.span2 {
+    position: absolute;
+    padding: 5px 25px 5.5px 25px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 9pt;
+    border-style: solid;
+    border-width: thin;
+    color: rgb(180, 152, 107);
+    border-color: rgb(180, 152, 107);
+    text-align: center;
+}
+.span2:hover {text-decoration: none; background-color: rgb(180, 152, 107);}
+.span2 a:visited {text-decoration: none; color: rgb(180, 152, 107);}
+.span2 a:hover {text-decoration: none; color: white}
+
+.subHeader {
+    position: relative;
+    left: 1047px;
+    top: 20px;
+    padding-top: 25px;
+    padding-left: 2px;
+}
+.subHeader a { text-decoration:none; font-size: 9pt; color: rgb(160, 145, 135); }
+
+#logo { padding-top: 32px; padding-left: 37px; width: 221px; height: 51px; }
+#prev {position: relative; z-index: 1; left: 80px; bottom: 200px;}
+#next {position: relative; z-index: 1; bottom: 200px; right: 80px}
+.menu { position: relative; float:right; display: inline-block; color: black; }
+.menuBtn { background-color: white;  margin-top: 55px; margin-left: -525px;color: black;
+    font-weight: bold; border: none; font-size: 21px; }
+.menu-content {
+    display: none; position: fixed; width: 130px; border-style: solid; border-width: thin;
+    border-radius: 5px; border-color: rgb(160, 145, 135);  font-size: 9pt;
+    text-align: center; margin-left: -570px; z-index: 1; background-color: white; }
+.menu-content a {color: black; padding: 12px 16px; text-decoration: none; display: block;}
+.menu-content a:hover {background-color: red; color: white}
+.menu:hover .menu-content {display: block}
+
+.loc { position: relative; float:right; display: inline-block; color: black; }
+.locBtn { background-color: white; margin-top: 55px; margin-left: -420px; color: black;
+    font-weight: bold; border: none; font-size: 21px;}
+.loc-content {
+    display: none; position: fixed; width: 130px; border-style: solid; border-width: thin;
+    border-radius: 5px; border-color: rgb(160, 145, 135); margin-left: -452px; font-size: 9pt;
+    text-align: center; z-index: 1; background-color: white; }
+.loc-content a {color: black; padding: 12px 16px; text-decoration: none; display: block;}
+.loc-content a:hover {background-color: red; color: white}
+.loc:hover .loc-content {display: block}
+
+.with { position: relative; float:right; display: inline-block; color: black; }
+.withBtn { background-color: white; margin-top: 55px; margin-left: -285px; color: black;
+    font-weight: bold; border: none; font-size: 21px; }
+.with-content {
+    display: none; position: fixed; width: 130px; border-style: solid; border-width: thin;
+    border-radius: 5px; border-color: rgb(160, 145, 135); margin-left: -310px; font-size: 9pt;
+    text-align: center; z-index: 1; background-color: white; }
+.with-content a {color: black; padding: 12px 16px; text-decoration: none; display: block;}
+.with-content a:hover {background-color: red; color: white}
+.with:hover .with-content {display: block}
+
+.story { position: relative; float:right; display: inline-block; color: black; }
+.storyBtn { background-color: white; margin-top: 55px; margin-left: -140px; color: black;
+    font-weight: bold; border: none; font-size: 21px; }
+.story-content {
+    display: none; position: fixed; width: 130px; border-style: solid; border-width: thin;
+    border-radius: 5px; border-color: rgb(160, 145, 135); margin-left: -160px; font-size: 9pt;
+    text-align: center; z-index: 1; background-color: white; }
+.story-content a {color: black; padding: 12px 16px; text-decoration: none; display: block;}
+.story-content a:hover {background-color: red; color: white}
+.story:hover .story-content {display: block}
+
+#line1 {
+    position: relative; float: right; top: 57px; left: -454px;
+    color:rgb(160, 145, 135); font-size: 13.5pt; font-weight: lighter; }
+#line2 {
+    position: relative; float: right; top: 57px; left: -316px;
+    color: rgb(160, 145, 135); font-size: 13.5pt; font-weight: lighter; }
+#line3 {
+    position: relative; float: right; top: 57px;
+    left: -173px; color:rgb(160, 145, 135); font-size: 13.5pt; font-weight: lighter; }
+
+#event_gallery { position: relative; margin-top: 30px; margin-left: 30px; width: 900px; height: 450px; }
+
+#img1 { position: relative; float: right; left: -60px; top : -455px; width: 450px; height: 450px;}
+#best {position: relative; z-index: 1; bottom: 145px; left: 95px;}
+#img2 { position: relative; float: bottom; right:20px; bottom: 5px; width: 420px; height: 180px; }
+#hot {position: relative; z-index: 1; top: 40px; right: 410px;}
+#img3 { position: relative; float: bottom; left: 63px; bottom:10px; width: 420px; height: 180px; }
+#img4 { position: relative; float: right; width: 450px; left: -60px; top: -190px; height: 360px; }
+
+#search_box {
+    position: relative;
+    width: 306px;
+    border: none;
+    background-color: white;
+    font-size: 15pt;
+    z-index: 1;
+    left: 507px;
+    height: 42px;
+    bottom: 267px;
+}
+#submit {
+    border:none;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(34, 25, 23);
+    color: white;
+    padding: 5px;
+    width: 69px;
+    height: 38px;
+    left: 505px;
+    bottom: 270px;
+    text-align: center;
+    font-size: 12pt;
+}
+
+#map {
+    border-radius: 2px;
+    border: 1px solid rgb(55, 43, 38);
+    background-color: rgb(240, 217, 180);
+    position: relative;
+    left: 623px;
+    font-size: 8pt;
+    bottom: 179px;
+    padding: 2px 6px 2px 6px;
+}
+
+#watch{
+    border-radius: 2px;
+    border: 1px solid rgb(55, 43, 38);
+    background-color: rgb(240, 217, 180);
+    position: relative;
+    left: 625px;
+    font-size: 8pt;
+    bottom: 179px;
+    padding: 2px 6px 2px 6px;
+
+}
+#map a, #watch a {text-decoration: none; color: rgb(55, 43, 38)}
+
+#mint {position: relative; top: -436px; left: 930px; width: 450px; height: 360px; background-color: rgb(188,224,207);}
+#plus {padding-right: 40px; padding-bottom: 20px; text-align: right; font-size: 25pt;}
+#plus a {text-decoration: none}
+.news {width:90px; height:50px; padding-left: 30px; padding-top: 5px; }
+div > a:hover {text-decoration: none; color: red;}
+.txt { position: relative; left: 5px; top: -30px;}
+#news_img {position: relative; top: 30px; left: 30px;}
+
+#chain { position: relative; left: 60px; bottom: 420px; width: 150px;}
+#chain_txt {font-size: 15pt; font-weight: bold; line-height: 40px;}
+#focus {border-style: solid; border-width: 2px; text-align: center; padding-top: 4px; padding-bottom: 4px; width: 100px; font-size: 11pt; margin-top: 10px;}
+#gaesul { width: 700px; left: 225px; position: relative; bottom: 540px; }
+
+#link1{border-style: solid; position: relative;right: 360px; bottom: 590px; padding: 14px 10px 14px 10px; opacity:  0}
+#link2{border-style: solid; position: relative;right: 235px; bottom: 590px; padding: 14px 10px 14px 10px; opacity: 0}
+#link3{border-style: solid; position: relative;right: 110px; bottom: 590px; padding: 14px 5px 14px 5px; opacity: 0}
+
+.sns {
+    padding: 70px 145px 70px 145px;
+    position: relative;
+    bottom: 675px;
+    left: 930px;
+    width: 160px;
+    background-color: rgb(247, 246, 245);
+}
+
+hr {position:relative; bottom: 675px; margin-left: 50px; margin-right: 60px}
+
+#info {position: relative; bottom: 650px; left: 50px; font-size: 11pt;}
+#info a:hover {text-decoration: none; color:black;}
+#small_sns {position: relative; bottom: 670px; left: 480px;}
+#call {position: relative; bottom: 700px; left: 570px;}
+#gamang {position: relative; bottom: 735px; left: 780px;}
+#last_txt{ position:relative; font-size: 9pt; bottom: 730px; left: 50px; color: rgb(117, 117, 117);}

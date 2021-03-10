@@ -1,0 +1,25 @@
+Java DateBase Connection
+
+1. dvier연결
+2. 계정 연결
+3. query 준비
+4. query 실행 및 리턴
+5. db 종료
+
+MVC pattern
+
+Mode : 연산/처리, db연결
+View : 화면 (데이터를 화면에 구성시켜줌)
+Controller : 화면제어 (요청에 맞는 화면을 응답)
+
+
+v와 c 사이에 데이터 전달dto(data transfer object)
+
+Statement - 문자열 다 만들어 줘야함
+
+PreparedStatement - 미리 쿼리를 만들어 놓는다.
+
+
+executeQuery
+
+executeUpdate

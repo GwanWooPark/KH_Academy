@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+    <script type="text/javascript" src="resources/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" >
+        /*
+            jqeury  기본 작성법 : css selector 표현식
+            $("css.selector").method();
+            $("p").css("color", "red");
+
+            기능 구현 2가지
+            window.onload = function() {
+            대신
+            $(function() {
+                 // 명령;
+             });
+
+             $(document).ready
+        */
+
+        function highlight() {
+            $("#list01 > li").eq(0).css("background-color", "skyblue");
+        }
+
+        $(function () {
+            $("img").click(function () {
+                alert("이미지를 클릭했다.");
+                $(this).hide();
+            });
+        });
+
+        function showImg() {
+            $("img").show();
+        }
+
+        function resizeImg() {
+            //$("img").css("width", "100px").css("height", "100px");
+            $("img").css({"width": "100px", "height": "100px"}).css("opacity", "0.5");
+        }
+
+        function addImg() {
+            $("img").last().after("<img src = 'resources/image/img02.png'>");
+        }
+
+        function toggleImg() {
+            $("img").toggle();
+        }
+    </script>
+
+    <!--
+        jQuery는 javascript의 library 이다
+        jquery-x.x.x.js :공백 포함
+        jquery-x.x.x.min.js : 공백 제거(용량이 작다.)
+    -->
+</head>
+<body>
+
+    <h1>jquery</h1>
+
+    <ul id="list01">
+        <li>1. css 선택자 표현식</li>
+        <li>2. DOM 탐색 메서드</li>
+        <li>3. 이벤트 메서드</li>
+        <li>4. 이펙트 메서드</li>
+        <li>5. ajax</li>
+    </ul>
+    <button onclick="highlight();">리스트</button>
+
+    <button onclick="showImg();">이미지 보이기</button>
+    <button onclick="resizeImg();">이미지 축소</button>
+    <button onclick="addImg();">이미지 추가</button>
+    <button onclick="toggleImg();">이미지 숨기기/보이기</button>
+
+    <div>
+        <img alt="test" src="resources/image/img06.png">
+    </div>
+</body>
+</html>

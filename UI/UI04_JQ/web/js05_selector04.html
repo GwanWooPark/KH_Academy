@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="resources/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            // .submit : form 태그 안에서 submit 이벤트가 발생했을 때 실행됨
+            $("#signal").submit(function () {
+                if ($(".infobox").val() == null || $(".infobox").val().trim() == "") { // 유효성 검사
+                    $(".error").show();
+                    return false;
+                }
+            });
+
+            $("#confirm").click(function () {
+                $("#result").empty(); // 선택한 요소의 내용을 지움.
+
+                if ($("input[name=chk]:checked").length == 0) {
+                    alert("하나 이상 체크");
+                } else {
+                    var total = 0;
+                    $("input[name=chk]:checked").each(function (i) { // 반복 가능한 객체이면 그 수만큼 반복한다.
+                        var chk = $("input[name=chk]").eq(i); // 선택한 tag의 인덱스 번호에 해당하는 tag
+                        var book = chk.next().text(); // 다음형제 tag의 text --> <b>안의 텍스
+                        var price = chk.val();
+                        $("#result").append(book + "(" + price + ")<br>");
+                        total += parseInt(price);
+                    });
+                    $("#result").append("총합 : " + total);
+                }
+            });
+
+            // ------
+
+            $("input[name=chk]").click(function () {
+
+                if ($("input[name=chk]").length === $("input[name=chk]:checked").length) {
+                    $("input[name=all]").prop("checked", true);
+                } else {
+                    $("input[name=all]").prop("checked", false);
+                }
+            });
+        });
+        /*
+            엘리먼트의 속성 값을 사용
+            getter & setter의 느낌
+            - html tag의 속성(attribute)
+              문서 자체를 건드린다. 정적이다. 따라서 한 번 값을 직접적으로 바꾸면 마지막에 한 대로 남아버림.
+           .attr("attributeName") :
+           .attr("attributeName", "value") :
+           - javascript object의 속성(property)
+             자바 스크립트로 가져가서 객체를 이용해서 값을 바꿈. 동적.
+           .prop("propertyName") :
+           .prop("propertyName", "value") :
+         */
+        function allCheck(bool) {
+            $("input[name=chk]").each(function () {
+                $(this).prop("checked", bool);
+            });
+        }
+    </script>
+
+</head>
+<body>
+
+    <form action="" id="signal" method="get">
+        <div>
+            <span class="label">User ID</span>
+            <input type="text" class="infobox" name="userid">
+            <span class="error" hidden="" style="color: red">반드시 입력</span>
+        </div>
+        <input type="submit" class="submit" value="입력">
+    </form>
+
+    <fieldset style="width: 300px">
+        <legend>체크</legend>
+        <input type="checkbox" name="all" onclick="allCheck(this.checked);">전체 선택<br>
+        <input type="checkbox" name="chk" value="40000"><b>java</b><br>
+        <input type="checkbox" name="chk" value="39000"><b>database</b><br>
+        <input type="checkbox" name="chk" value="30000"><b>javascript</b><br>
+        <input type="button" value="확인" id="confirm"><br>
+
+        <span>선택한 책의 총 가격</span>
+        <div id = "result"></div>
+    </fieldset>
+</body>
+</html>

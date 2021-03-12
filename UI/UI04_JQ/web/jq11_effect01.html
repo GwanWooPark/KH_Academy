@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        img {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 200px;
+            top: 100px;
+        }
+        p {
+            width: 100px;
+            border: 1px solid red;
+            left: 10px;
+            display: none;
+            position: absolute;
+        }
+    </style>
+
+    <script type="text/javascript" src="resources/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("b").click(function () {                              // b태그 클릭 이벤트 발생
+                $("p").toggle();                                    // p태그 토글
+                $("p").each(function (i) {                          // p태그의 갯수만큼 반복
+                    $(this).animate({                               // 아래로 메뉴가 펼쳐진
+                        "top": 50 * (i + 1) + "px"
+                    }, 1000);
+                });
+            });
+            $("p").bind("click", function () {                      // bind로 클릭과 기능을 묶음
+                var ele = $(this);                                  // ele에 this로 클릭하는 객체 담아옴
+                ele.css("background", "hotpink");                   // background 속성을 한번에 hotpink 처리
+                ele.siblings("p").css("background-color", "");      //  선택한 요소의 형제(sibling) 요소 중에서 지정한 선택자에 해당하는 요소를 모두 선택 -> p태그 모두 선
+
+                if (ele.is("p:contains(hide)")) {                   // contains : 특정 문자열을 포함 유무
+                    $("img").hide();                                // hide(문자열)을 포함한 p태그이면
+                }
+                if (ele.is("p:contains(show)")) {
+                    $("img").show();
+                }
+                if (ele.is("p:contains(toggle)")) {
+                    $("img").toggle();
+                }
+                if (ele.is("p:contains(slideUp)")) {
+                    $("img").slideUp();
+                }
+                if (ele.is("p:contains(slideDown)")) {
+                    $("img").slideDown();
+                }
+                if (ele.is("p:contains(slideToggle)")) {
+                    $("img").slideToggle();
+                }
+                if (ele.is("p:contains(fadeOut)")) {
+                    $("img").fadeOut();
+                }
+                if (ele.is("p:contains(fadeIn)")) {
+                    $("img").fadeIn();
+                }
+                if (ele.is("p:contains(fadeTo)")) {                 // fadeTo (4000ms, opacity : 0.2)
+                    $("img").fadeTo(4000, 0.2);
+                }
+                if (ele.is("p:contains(fadeToggle)")) {
+                    $("img").fadeToggle();
+                }
+                if (ele.is("p:contains(animate)")) {
+                    $("img").animate({                              // 애니메이션 효과를 만든다 animate(속성, 애니매이션 시간)
+                        "width": "500px",
+                        "height": "500px",
+                        "left": "600px",
+                        "top": "0px"
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <b>이펙트 메서드</b>
+
+    <div>
+        <p>hide()</p>
+        <p>show()</p>
+        <p>toggle()</p>
+        <p>slideUp()</p>
+        <p>slideDown()</p>
+        <p>slideToggle()</p>
+        <p>fadeOut()</p>
+        <p>fadeIn()</p>
+        <p>fadeTo()</p>
+        <p>fadeToggle()</p>
+        <p>animate()</p>
+    </div>
+    <img alt="" src="resources/image/img01.png" id="img01">
+</body>
+</html>

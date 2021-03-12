@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="resources/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("p:eq(0)").add("span").css("color", "red");       // p의 0번잡고 span도 잡는다.
+            $("div").children().click(function () {
+                if ($(this).prop("tagName") === "SPAN") {       // div의 자식요소중 클릭된 this가 span이라는 tagName을 가지고 있다면
+                    alert("span 태그 클릭");
+                    $(this).css("color", "darkgray");
+                }
+
+                if ($(this).is("p")) {                          // 클릭된 놈이 ? ~라면
+                    $(this).css("background-color", "hotpink");
+                }
+            });
+
+            $("b").click(function () {
+                $("p:eq(0)").add("span").css("color", "red");
+                $("div").children().css("background-color", "");
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+    <div>
+        <p>add()</p>
+        <span>선택한 엘리먼트에 추가적으로 selector 표현식을 작성할 때 사용</span>
+        <p>is()</p>
+        <b>선택한 엘리먼트들 중에 구하는 엘리먼트가 있는지를 확인</b>
+    </div>
+</body>
+</html>

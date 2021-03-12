@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="resources/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+        function test01() {
+            var doc = $("input:text").val();   // 입력한 text값을 가지고 온다.
+            alert(doc);
+        }
+
+        function test02() {
+            var doc = $("input:radio").val();
+            alert("시작날짜 : " + doc);
+        }
+
+        function test03() {
+            var doc = $("input:checkbox").val();
+            alert("과정명 : " + doc);
+        }
+
+        // window가 load된 이후에 select tag의 option이 change 이벤트가 발생하면 option의 value값과, index alert
+
+        $(function () {
+            $("select").change(function () {
+                var option = $("select > option:selected");
+                alert(option.val() + " index " + $("select > option").index(option))
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <form action="">
+        <input type="text">
+        <input type="button" value="선택" onclick="test01()"><br>
+        <input type="radio" value="21/01/12" onclick="test02()"> 21/01/12 ~ <br>
+        <input type="checkbox" value="전문가 과정" onclick="test03()"> 빅데이터 전문 개발자 과정 <br>
+    </form>
+
+    <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+
+
+</body>
+</html>

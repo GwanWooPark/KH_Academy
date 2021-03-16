@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	div{border: 1px solid red;}
+	.prepend{border: 1px dotted blue;}
+	.append{border: 1px dotted green;}
+</style>
+
+<script type="text/javascript" src="resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		var cnt = 0;
+		$("button:eq(0)").click(function(){
+			// 자식요소로 저장하는데, 가장 앞에 추가
+			$("div").prepend($("<p>").addClass("prepend").text("prepend"+(cnt++)));
+		});
+		$("button:eq(1)").click(function(){
+			// .. 가장 뒤에 추가
+			$("div").append($("<p>").addClass("append").text("append"+(cnt++)));
+		});
+		$("button:eq(2)").click(function(){
+			$("div").html("<b>html요소를 바꾼다.</b>");
+		});
+		$("button:eq(3)").click(function(){
+			$("div").text("<b>text요소를 바꾼다.</b>");
+		});
+	});
+	
+</script>
+
+</head>
+<body>
+
+	<button>prepend</button>
+	<button>append</button>
+	<button>html</button>
+	<button>text</button>
+
+	<div>
+		<p>내부 삽입 하기 1</p>
+		<p>내부 삽입 하기 2</p>
+	</div>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+	.box{
+		border: 2px solid red;
+	}
+	#menu{
+		background-color: skyblue;
+		text-align: right;
+	}
+	a{
+		text-decoration: none;
+		font-size: 20pt;
+	}
+	#menu div {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+</style>
+<script type="text/javascript" src="resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		var $box = $("<div>").addClass("box");
+		// $box = <div class="box"></div>
+		
+		$(".sub_menu:first").wrap($box);
+		// <div class="box"><div class="sub_menu"><a href="#"><span>국비지원</span></a></div></div>
+		
+		$(".sub_menu").click(function(){
+			$(".sub_menu").each(function(){
+				if($(this).parent().is(".box")){
+					$(this).unwrap(".box");
+				}
+			});
+			$(this).wrap($box);
+		});
+		
+		$("a").wrapInner("<span></span>");
+		$("pre").wrapAll("<b></b>");
+	});
+
+</script>
+</head>
+<body>
+	<pre>e</pre>
+	<div id="menu">
+		<div class="sub_menu">
+			<pre>f</pre>
+			<a href="#"><span>국비지원</span></a>
+		</div>
+		<div class="sub_menu">
+			<a href="#">훈련검색</a>
+		</div>
+		<div class="sub_menu">
+			<a href="#">질문답변</a>
+		</div>
+		<div class="sub_menu">
+			<a href="#">과정후기</a>
+		</div>
+	</div>
+
+	<pre>a</pre>
+	<pre>b</pre>
+	<pre>c</pre>
+	<pre>d</pre>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

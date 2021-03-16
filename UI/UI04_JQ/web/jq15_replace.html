@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="resources/js/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){
+		$("button:first").click(function(){
+			// target이 앞에 온다.
+			$("p").replaceWith("<p><b>replaceWith</b></p>");
+		});
+		$("button:last").click(function(){
+			// target이 뒤에 온다.	
+			$("<p><b>replaceAll</b></p>").replaceAll("p");
+		});
+	});
+
+</script>
+
+</head>
+<body>
+
+	<div>
+		<p>DOM 대체</p>
+	</div>
+
+	<button>바꾸기(replaceWith)</button>
+	<button>바꾸기(replaceAll)</button>
+
+</body>
+</html>
+
+
+
+

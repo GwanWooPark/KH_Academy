@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	a{
+		font-weight: bold;
+		color: #000000;
+	}
+	#box{
+		background-color: skyblue;
+		width: 100px;
+		height: 100px;
+		position: relative;
+	}
+</style>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		$(".run").click(function(){
+			$("#box").animate({opacity: "0.1", left: "400px"},1000)
+					 .animate({opacity: "0.4", top: "160px", width: "20px", height: "20px"}, "slow")
+					 .animate({opacity: "1", background: "lime", left: "0px", width: "100px", height: "100px"}, "fast")
+					 .animate({top: "0px"}, "fast")
+					 .slideUp().slideDown("slow");
+		});
+	});
+
+</script>
+
+</head>
+<body>
+
+	<p><a href="#" class="run">Run</a></p>
+
+	<div id="box"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

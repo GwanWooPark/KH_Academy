@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	img{
+		width: 150px;
+		height: 150px;
+		float: left;
+		background-color: black;
+	}
+	#menubox{ position: relative;}
+	#menu{overflow: auto;}
+	.sel{
+		width: 140px;
+		height: 140px;
+		border: 5px dotted red;
+		position: absolute;
+		left: 300px;
+	}
+	button{
+		width: 150px;
+		height: 50px;
+		margin-left: 300px;
+	}
+	
+</style>
+
+<script type="text/javascript" src="resources/js/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){
+		// setInterval : 일정 간격으로(일정 시간마다) 해당 함수를 반복
+		setInterval(function(){
+			var div = $("#menu");
+			// appendTo : div태그의 자식요소중 가장 뒤에 추가
+			$(".active").first().appendTo(div);
+		}, 50);
+		
+		$("button").click(function(){
+			$("img").toggleClass("active");
+			
+			if($("button").text() == "start"){
+				$("button").text("stop");
+			} else {
+				$("button").text("start");
+			}
+		});
+	});
+
+</script>
+
+</head>
+<body>
+
+	<h1>777</h1>
+
+	<div id="menubox">
+		<div class="sel"></div>
+		<div id="menu">
+			<img alt="img01" src="resources/image/img01.png"/>
+			<img alt="img02" src="resources/image/img02.png"/>
+			<img alt="img03" src="resources/image/img03.png"/>
+			<img alt="img04" src="resources/image/img04.png"/>
+			<img alt="img05" src="resources/image/img05.png"/>
+		</div>
+	</div>
+	<button>start</button>
+
+</body>
+</html>
+
+
+
+
+
+
+

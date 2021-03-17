@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%
+    request.setCharacterEncoding("utf-8");
+    response.setCharacterEncoding("utf-8");
+%>
 <html>
 <head>
     <title>Title</title>
@@ -16,6 +20,7 @@
 
     <form action="myinsertres.jsp" method="post"> <!-- header에 너무 많은 양의 데이터가 들어가게되면 오류 발생 -->
         <table border="1">
+
             <tr>
                 <th>작성자</th>
                 <td><input type="text" name="myname"></td>
@@ -31,9 +36,8 @@
             <tr>
                 <td colspan="2" align="right">
                     <input type="submit" value="작성">
-                    <input type="button" value="취소" onclick="">
+                    <input type="button" value="취소" onclick="location.href='mylist.jsp'">
                 </td>
-
             </tr>
         </table>
     </form>

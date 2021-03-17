@@ -1,6 +1,10 @@
 <%@ page import="com.my.dto.MyBoardDto" %>
 <%@ page import="com.my.biz.MyBoardBiz" %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%
+    request.setCharacterEncoding("utf-8");
+    response.setCharacterEncoding("utf-8");
+%>
 <html>
 <head>
     <title>Title</title>
@@ -8,17 +12,20 @@
 <body>
 
     <%
+        int myno = Integer.parseInt(request.getParameter("myno"));
         String myname = request.getParameter("myname");
         String mytitle = request.getParameter("mytitle");
         String mycontent = request.getParameter("mycontent");
 
         MyBoardDto dto = new MyBoardDto();
+        dto.setMyno(myno);
         dto.setMyname(myname);
         dto.setMytitle(mytitle);
         dto.setMycontent(mycontent);
 
         MyBoardBiz biz = new MyBoardBiz();
         int res = biz.insert(dto);
+
         if (res > 0) {
     %>
     <script type="text/javascript">
@@ -26,7 +33,7 @@
         location.href = "mylist.jsp"
     </script>
     <%
-        } else {
+    } else {
     %>
     <script type="text/javascript">
         alert("글 작성 실패");

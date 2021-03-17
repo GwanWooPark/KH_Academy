@@ -51,7 +51,45 @@ public class MyBoardDao {
     }
 
     public MyBoardDto selectOne(int myno) {
-        return null;
+
+
+        // 1, 2.
+        Connection con = getConnection();
+
+        // 3.
+        String sql = " SELECT MYNO, MYNAME, MYTITLE, SYSDATE , MYCONTENT " +
+                     " FROM MYBOARD " +
+                     " WHERE MYNO = ? ";
+
+        MyBoardDto dto = new MyBoardDto();
+        PreparedStatement pstm = null;
+        ResultSet rs = null;
+
+        try {
+            pstm = con.prepareStatement(sql);
+            pstm.setInt(1, myno);
+
+            rs = pstm.executeQuery();
+
+            while (rs.next()) {
+                dto.setMyno(rs.getInt(1));
+                dto.setMyname(rs.getString(2));
+                dto.setMytitle(rs.getString(3));
+                dto.setMydate(rs.getDate(4));
+                dto.setMycontent(rs.getString(5));
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(rs);
+            close(pstm);
+            close(con);
+        }
+
+
+        return dto;
     }
 
     public int insert(MyBoardDto dto) {
@@ -61,18 +99,62 @@ public class MyBoardDao {
 
         // 3.
         String sql = " INSERT INTO MYBOARD " +
-                     " VALUES(MYBOARDSEQ.NEXTVAL, ?, ?, ?, SYSDATE) ";
+                     " VALUES (MYBOARDSEQ.NEXTVAL, ?, ?, ?, SYSDATE) ";
+
+        PreparedStatement pstm = null;
+        int res = 0;
+
+        try {
+            pstm = con.prepareStatement(sql);
+
+            System.out.println("3. query 준비 : " + sql);
+
+            pstm.setString(1, dto.getMyname());
+            pstm.setString(2, dto.getMytitle());
+            pstm.setString(3, dto.getMycontent());
+            System.out.println("4. query 실행 및 리턴");
+
+            // 4.
+            res = pstm.executeUpdate();
+            if (res > 0) {
+                commit(con);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+
+            // 5.
+            close(pstm);
+            close(con);
+            System.out.println("5. db 종료");
+        }
+        return res;
+    }
+
+    public int update(MyBoardDto dto) {
+
+        // 1, 2.
+        Connection con = getConnection();
+
+        // 3.
+        String sql = " UPDATE MYBOARD " +
+                     " SET MYTITLE = ?, MYCONTENT = ?, MYDATE = SYSDATE " +
+                     " WHERE MYNO = ? ";
+
         PreparedStatement pstm = null;
         int res = 0;
 
         try {
             pstm = con.prepareStatement(sql);
             System.out.println("3. query 준비 : " + sql);
-            pstm.setString(1, dto.getMyname());
+
             pstm.setString(2, dto.getMytitle());
             pstm.setString(3, dto.getMycontent());
-            res = pstm.executeUpdate();
+            pstm.setInt(4, dto.getMyno());
+
+            System.out.println(dto.getMyno());
             System.out.println("4. query 실행 및 리턴");
+            res = pstm.executeUpdate();
             if (res > 0) {
                 commit(con);
             }
@@ -83,14 +165,38 @@ public class MyBoardDao {
             close(con);
             System.out.println("5. db 종료");
         }
-        return 0;
-    }
 
-    public int update(MyBoardDto dto) {
-        return 0;
+        return res;
     }
 
     public int delete(int myno) {
-        return 0;
+
+        // 1, 2.
+        Connection con = getConnection();
+
+        // 3.
+
+        String sql = " DELETE " +
+                     " FROM MYBOARD " +
+                     " WHERE MYNO = ? ";
+
+        PreparedStatement pstm = null;
+        int res = 0;
+
+        try {
+
+            pstm = con.prepareStatement(sql);
+            pstm.setInt(1, myno);
+
+            res = pstm.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(pstm);
+            close(con);
+        }
+
+        return res;
     }
 }

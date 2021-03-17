@@ -10,7 +10,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8"  pageEncoding="UTF-8" language="java" %>
-
+<%
+    request.setCharacterEncoding("utf-8");
+    response.setCharacterEncoding("utf-8");
+%>
 <html>
 <head>
     <title>Title</title>
@@ -38,7 +41,7 @@
         <tr>
             <td><%=dto.getMyno()%></td>
             <td><%=dto.getMyname()%></td>
-            <td><a href="myselect.jsp?myno<%=dto.getMyno()%>"><%=dto.getMytitle()%></a></td>
+            <td><a href="myselect.jsp?myno=<%=dto.getMyno()%>"><%=dto.getMytitle()%></a></td>
             <td><%=dto.getMydate()%></td>
         </tr>
         <%

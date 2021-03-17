@@ -13,6 +13,12 @@ public class MyBoardDto {
     public MyBoardDto() {
     }
 
+    public MyBoardDto(String myname, String mytitle, String mycontent) {
+        this.myname = myname;
+        this.mytitle = mytitle;
+        this.mycontent = mycontent;
+    }
+
     public MyBoardDto(int myno, String myname, String mytitle, String mycontent, Date mydate) {
         this.myno = myno;
         this.myname = myname;
@@ -60,4 +66,5 @@ public class MyBoardDto {
     public void setMydate(Date mydate) {
         this.mydate = mydate;
     }
+
 }

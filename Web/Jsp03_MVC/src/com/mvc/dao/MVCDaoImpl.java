@@ -1,6 +1,6 @@
-package com.muldel.dao;
+package com.mvc.dao;
 
-import com.muldel.dto.MDBoardDto;
+import com.mvc.dto.MVCDto;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,37 +8,30 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import static com.muldel.db.JDBCTemplate.*;
+import static com.mvc.db.JDBCTemplates.*;
 
-public class MDBoardDaoImpl implements MDBoardDao{
+public class MVCDaoImpl implements MVCDao{
 
     @Override
-    public List<MDBoardDto> selectList() {
+    public List<MVCDto> selectList() {
 
-        // 1, 2.
         Connection con = getConnection();
-
-        // 3.
-
         PreparedStatement pstm = null;
         ResultSet rs = null;
-        List<MDBoardDto> list = new ArrayList<MDBoardDto>();
+        List<MVCDto> list = new ArrayList<MVCDto>();
 
         try {
             pstm = con.prepareStatement(SELECT_LIST_SQL);
             rs = pstm.executeQuery();
-
             while (rs.next()) {
-                MDBoardDto dto = new MDBoardDto();
-                dto.setSeq(rs.getInt(1));
-                dto.setWriter(rs.getString(2));
-                dto.setTitle(rs.getString(3));
-                dto.setContent(rs.getString(4));
-                dto.setRegdate(rs.getDate(5));
+                MVCDto dto = new MVCDto(rs.getInt("SEQ"),
+                        rs.getString("WRITER"),
+                        rs.getString("TITLE"),
+                        rs.getString("CONTENT"),
+                        rs.getDate("REGDATE"));
 
                 list.add(dto);
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -47,30 +40,21 @@ public class MDBoardDaoImpl implements MDBoardDao{
             close(con);
         }
 
-
         return list;
     }
 
     @Override
-    public MDBoardDto selectOne(int seq) {
+    public MVCDto selectOne(int seq) {
 
-        // 1, 2.
         Connection con = getConnection();
 
         PreparedStatement pstm = null;
         ResultSet rs = null;
-        MDBoardDto dto = new MDBoardDto();
+        MVCDto dto = new MVCDto();
 
         try {
             pstm = con.prepareStatement(SELECT_ONE_SQL);
             rs = pstm.executeQuery();
-            while (rs.next()) {
-                dto.setSeq(rs.getInt(1));
-                dto.setWriter(rs.getString(2));
-                dto.setTitle(rs.getString(3));
-                dto.setContent(rs.getString(4));
-                dto.setRegdate(rs.getDate(5));
-            }
 
 
         } catch (SQLException e) {
@@ -84,9 +68,8 @@ public class MDBoardDaoImpl implements MDBoardDao{
     }
 
     @Override
-    public int insert(MDBoardDto dto) {
+    public int insert(MVCDto dto) {
 
-        // 1, 2.
         Connection con = getConnection();
 
         PreparedStatement pstm = null;
@@ -94,11 +77,11 @@ public class MDBoardDaoImpl implements MDBoardDao{
 
         try {
             pstm = con.prepareStatement(INSERT_SQL);
-            pstm.setString(1, dto.getWriter());
+            pstm.setString(1, dto.getWiter());
             pstm.setString(2, dto.getTitle());
             pstm.setString(3, dto.getContent());
-
             res = pstm.executeUpdate();
+
 
             if (res > 0) {
                 commit(con);
@@ -113,9 +96,8 @@ public class MDBoardDaoImpl implements MDBoardDao{
     }
 
     @Override
-    public int update(MDBoardDto dto) {
+    public int update(MVCDto dto) {
 
-        // 1, 2
         Connection con = getConnection();
 
         PreparedStatement pstm = null;
@@ -123,8 +105,6 @@ public class MDBoardDaoImpl implements MDBoardDao{
 
         try {
             pstm = con.prepareStatement(UPDATE_SQL);
-            pstm.setString(1, dto.getTitle());
-            pstm.setString(2, dto.getContent());
 
             res = pstm.executeUpdate();
 
@@ -144,14 +124,13 @@ public class MDBoardDaoImpl implements MDBoardDao{
     @Override
     public int delete(int seq) {
 
-        // 1, 2.
         Connection con = getConnection();
+
         PreparedStatement pstm = null;
         int res = 0;
 
         try {
             pstm = con.prepareStatement(DELETE_SQL);
-            pstm.setInt(1, seq);
 
             res = pstm.executeUpdate();
 
@@ -160,46 +139,6 @@ public class MDBoardDaoImpl implements MDBoardDao{
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            close(pstm);
-            close(con);
-        }
-
-        return res;
-    }
-
-    @Override
-    public int multiDelete(String[] seqs) {
-
-        Connection con = getConnection();
-
-        PreparedStatement pstm = null;
-        int res = 0;
-        int[] cnt = null;
-
-        try {
-            pstm = con.prepareStatement(DELETE_SQL);
-            for (int i = 0; i < seqs.length; i++) {
-                pstm.setString(1, seqs[i]);
-                pstm.addBatch();                                // 메모리에 sql문을 적재 후, executeBatch() 메소드가 호출되면 한 번에 실행;
-                System.out.println("삭제할 번호 : " + seqs[i]);
-            }
-
-            cnt = pstm.executeBatch();                         // 메모리에 적재되었던 모든 값을 가지고 와서, 실행한다. 리턴 : int[] 성공 -2 / 실패 -3
-            for (int i = 0; i < cnt.length; i++) {
-                if (cnt[i] == -2) {
-                    res++;
-                }
-            }
-
-            if (seqs.length == res) {
-                commit(con);
-            } else {
-                rollback(con);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-
         } finally {
             close(pstm);
             close(con);

@@ -28,6 +28,13 @@
         });
     });
 
+    function allCheck(bool) {
+        var chks = document.getElementsByName("chk");
+        for (var i = 0; i < chks.length; i++) {
+            chks[i].checked = bool;
+        }
+    }
+
 </script>
 <html>
 <head>
@@ -51,7 +58,7 @@
             <col width="500px">
             <col width="100px">
             <tr>
-                <th><input type="checkbox" name="all" value=""></th>
+                <th><input type="checkbox" name="all" onclick="allCheck(this.checked)"></th>
                 <th>번호</th>
                 <th>작성자</th>
                 <th><a href="#">제목</a></th>
@@ -64,7 +71,7 @@
                 <td><input type="checkbox" name="chk" value="<%=dto.getSeq()%>"></td>
                 <td align="center"><%=dto.getSeq()%></td>
                 <td align="center"><%=dto.getWriter()%></td>
-                <td><a href=""><%=dto.getTitle()%></a></td>
+                <td><a href="boardselect.jsp?seq=<%=dto.getSeq()%>"><%=dto.getTitle()%></a></td>
                 <td align="center"><%=dto.getRegdate()%></td>
             </tr>
 
@@ -74,7 +81,7 @@
             <tr>
                 <td colspan="5" align="right">
                     <input type="submit" value="선택 삭제">
-                    <input type="button" value="글 작성" onclick="location.href='isert.jsp'">
+                    <input type="button" value="글 작성" onclick="location.href='boardinsert.jsp'">
                 </td>
             </tr>
         </table>

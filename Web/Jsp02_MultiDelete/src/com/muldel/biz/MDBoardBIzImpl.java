@@ -17,22 +17,22 @@ public class MDBoardBIzImpl implements MDBoardBIz{
 
     @Override
     public MDBoardDto selectOne(int seq) {
-        return null;
+        return dao.selectOne(seq);
     }
 
     @Override
     public int insert(MDBoardDto dto) {
-        return 0;
+        return dao.insert(dto);
     }
 
     @Override
     public int update(MDBoardDto dto) {
-        return 0;
+        return dao.update(dto);
     }
 
     @Override
     public int delete(int seq) {
-        return 0;
+        return dao.delete(seq);
     }
 
     @Override

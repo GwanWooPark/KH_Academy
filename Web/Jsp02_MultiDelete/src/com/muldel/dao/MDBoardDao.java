@@ -9,9 +9,17 @@ public interface MDBoardDao {
     String SELECT_LIST_SQL = " SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE " +
                              " FROM MDBOARD " +
                              " ORDER BY SEQ DESC ";
-    String SELECT_ONE_SQL = "";
-    String INSERT_SQL = "";
-    String UPDATE_SQL = "";
+
+    String SELECT_ONE_SQL = " SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE " +
+                            " FROM MDBOARD " +
+                            " WHERE SEQ = ? ";
+
+    String INSERT_SQL = " INSERT INTO MDBOARD " +
+                        " VALUES (MDBOARDSEQ.NEXTVAL, ?, ?, ?, SYSDATE) ";
+
+    String UPDATE_SQL = " UPDATTE MDBOARD " +
+                        " SET TITLE = ?, CONTENT = ?" +
+                        " WHERE SEQ = ? ";
     String DELETE_SQL = " DELETE FROM MDBOARD " +
                         " WHERE SEQ = ? ";
 

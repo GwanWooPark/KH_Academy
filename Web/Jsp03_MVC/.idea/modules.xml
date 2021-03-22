@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Jsp03_MVC.iml" filepath="$PROJECT_DIR$/Jsp03_MVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSP03_MVC.iml" filepath="$PROJECT_DIR$/JSP03_MVC.iml" />
     </modules>
   </component>
 </project>

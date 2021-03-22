@@ -35,7 +35,7 @@ public class MVCDto {
         this.seq = seq;
     }
 
-    public String getWiter() {
+    public String getWriter() {
         return writer;
     }
 

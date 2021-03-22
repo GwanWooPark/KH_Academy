@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function registForm() {
+
+        }
+    </script>
+</head>
+<body>
+
+    <form action="loginController.jsp" method="post">
+        <input type="hidden" name="command" value="login">
+        <table border="1">
+            <col width="100">
+            <col width="100">
+            <tr>
+                <th>ID</th>
+                <td><input type="text" name="myId"></td>
+            </tr>
+            <tr>
+                <th>PW</th>
+                <td><input type="password" name="myPw"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="login">
+                    <input type="button"  value="regist" onclick="registForm();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

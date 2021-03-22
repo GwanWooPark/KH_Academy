@@ -54,7 +54,16 @@ public class MVCDaoImpl implements MVCDao{
 
         try {
             pstm = con.prepareStatement(SELECT_ONE_SQL);
+            pstm.setInt(1, seq);
+
             rs = pstm.executeQuery();
+            while (rs.next()) {
+                dto.setSeq(rs.getInt(1));
+                dto.setWriter(rs.getString(2));
+                dto.setTitle(rs.getString(3));
+                dto.setContent(rs.getString(4));
+                dto.setDate(rs.getDate(5));
+            }
 
 
         } catch (SQLException e) {
@@ -77,7 +86,7 @@ public class MVCDaoImpl implements MVCDao{
 
         try {
             pstm = con.prepareStatement(INSERT_SQL);
-            pstm.setString(1, dto.getWiter());
+            pstm.setString(1, dto.getWriter());
             pstm.setString(2, dto.getTitle());
             pstm.setString(3, dto.getContent());
             res = pstm.executeUpdate();
@@ -105,6 +114,8 @@ public class MVCDaoImpl implements MVCDao{
 
         try {
             pstm = con.prepareStatement(UPDATE_SQL);
+            pstm.setString(1, dto.getTitle());
+            pstm.setString(2, dto.getContent());
 
             res = pstm.executeUpdate();
 
@@ -131,7 +142,7 @@ public class MVCDaoImpl implements MVCDao{
 
         try {
             pstm = con.prepareStatement(DELETE_SQL);
-
+            pstm.setInt(1, seq);
             res = pstm.executeUpdate();
 
             if (res > 0) {

@@ -5,7 +5,7 @@
   Time: 8:21 오후
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8"  pageEncoding="UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"  pageEncoding="UTF-8" %>
 <%
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
@@ -36,7 +36,7 @@
             <tr>
                 <td colspan="2" align="right">
                     <input type="submit" value="작성">
-                    <input type="button" value="취소" onclick="">
+                    <input type="button" value="취소" onclick="location.href='mvccontroller.jsp?command=list'">
                 </td>
             </tr>
         </table>

@@ -7,10 +7,10 @@ import java.util.List;
 public interface MVCDao {
 
     String SELECT_LIST_SQL = " SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE FROM MVCBOARD ";
-    String SELECT_ONE_SQL = "";
+    String SELECT_ONE_SQL = " SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE FROM MVCBOARD WHERE SEQ = ? ";
     String INSERT_SQL = " INSERT INTO MVCBOARD VALUES(MVCBOARDSEQ.NEXTVAL, ?, ?, ?, SYSDATE) ";
-    String UPDATE_SQL = "";
-    String DELETE_SQL = "";
+    String UPDATE_SQL = " UPDATE MVCBOARD SET TITLE=?, CONTENT=?, REGDATE = SYSDATE ";
+    String DELETE_SQL = " DELETE FROM MVCBOARD WHERE SEQ = ? ";
 
 
     public List<MVCDto> selectList();

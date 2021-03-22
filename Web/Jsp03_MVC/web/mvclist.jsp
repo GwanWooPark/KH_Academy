@@ -7,7 +7,7 @@
   Time: 7:10 오후
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <%
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
@@ -38,14 +38,14 @@
 %>
         <tr>
             <td><%=dto.getSeq()%></td>
-            <td><%=dto.getWiter()%></td>
-            <td><a href="#"><%=dto.getTitle()%></a></td>
+            <td><%=dto.getWriter()%></td>
+            <td><a href="mvccontroller.jsp?command=detail&seq=<%=dto.getSeq()%>"><%=dto.getTitle()%></a></td>
             <td><%=dto.getDate()%></td>
         </tr>
 <%
             }
 %>
     </table>
-    <input type="button" value="글쓰기" onclick="location.href='mvcinsert.jsp'">
+    <input type="button" value="글쓰기" onclick="location.href='mvccontroller.jsp?command=insertform'">
 </body>
 </html>

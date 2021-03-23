@@ -15,6 +15,23 @@ public class LoginDto {
     public LoginDto() {
     }
 
+    public LoginDto(int myNo, String myPw, String myAddr, String myPhone, String myEmail) {
+        this.myNo = myNo;
+        this.myPw = myPw;
+        this.myAddr = myAddr;
+        this.myPhone = myPhone;
+        this.myEmail = myEmail;
+    }
+
+    public LoginDto(String myId, String myPw, String myName, String myAddr, String myPhone, String myEmail) {
+        this.myId = myId;
+        this.myPw = myPw;
+        this.myName = myName;
+        this.myAddr = myAddr;
+        this.myPhone = myPhone;
+        this.myEmail = myEmail;
+    }
+
     public LoginDto(int myNo, String myId, String myPw, String myName, String myAddr, String myPhone, String myEmail, String myEnabled, String myRole) {
         this.myNo = myNo;
         this.myId = myId;

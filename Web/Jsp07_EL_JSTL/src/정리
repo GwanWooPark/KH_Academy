@@ -1,0 +1,4 @@
+1.Deploy할 때 Servlet의 정보를 설정해준다.
+  브라우저가 Java Servlet에 접근하기 위해서는 WAS(Ex. Tomcat)에 필요한 정보를 알려줘야 해당하는 Servlet을 호출할 수 있다.
+  정보 1) 배포할 Servlet이 무엇인지
+  정보 2) 해당 Servlet이 어떤 URL에 매핑되는지

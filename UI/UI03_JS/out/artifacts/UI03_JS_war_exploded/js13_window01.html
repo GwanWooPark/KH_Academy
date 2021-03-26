@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>윈도우 연습01</title>
+
+	<!-- 등록창 css 부분 -->
+<style type="text/css">
+	#regist {
+		border: 1px solid black;
+		background: pink;
+		position: absolute;
+		top: 200px;
+		left: 500px;
+		display: none;
+	}
+
+	#test {
+		/*visibility: hidden; */
+		display: none;
+		/*
+		   hidden - 자기 공간은 있음
+		   display:none - 자기 공간 자체도 없음
+		 */
+	}
+</style>
+
+<script type="text/javascript">
+	function openWin() {
+		var url = "js13_window02.html";
+		var title = "myframe";
+		var prop = "top=200px,left=600px,width=500px,height=500px";
+		window.open(url, title, prop);
+		//windows2 창 열어줌.
+	}
+
+	function registForm() {
+		document.getElementById("regist").style.display = "block";
+		document.body.style.background = "gray";
+		// 등록창이 뜨면 배경색 배경색 회색으로
+
+
+		// disabled = 회원 가입창이 떠 있어도 버튼 누르기 가능 true는 안됨. x
+		var btns = document.getElementsByName("btn");
+		for ( var i in btns) { //for in 문 (향상된 for문)
+		//	for(var i=0;i<btns.length;i++){
+			btns[i].disabled = "true";
+		}
+	}
+
+	// 윈도우 창 닫아줌.
+	function closeWin() {
+		document.getElementById("regist").style.display = "none";
+		document.body.style.background = "white";
+
+		// 회원가입 창이 닫아진 이후에 버튼들이 비활성화 되는 것을 방지
+	var btns = document.getElementsByName("btn");
+		for ( var i in btns) {
+			btns[i].disabled = "";
+		}
+	}
+
+	function idchk() {
+		alert("중복체크를 확인하세요");
+	}
+
+	function idCheck() { // window03.html에서 중복 체크를 한다.
+		open("js13_window03.html", "", "width=300px,height=300px");
+	}
+</script>
+
+</head>
+<body>
+
+	<h1>window객체</h1>
+	
+	<pre id ="test">
+	프로퍼티
+	 -document
+	 -history
+	 -location
+	 -navigator
+	 -screen
+	 -frames
+	 -parent
+	 -top
+	 -self
+	메서드
+	 -alert()
+	 -confirm()
+	 -prompt()
+	 -back()
+	 -forward()
+	 -setInterval()
+	 -clearInterval()
+	 -setTimeout()
+	 -open()
+	 -close()
+	 -scroll(),scrollBy(), scrollTo() 
+	</pre>
+
+	<div id="f1">
+		<h1>팝업창 만들기</h1>
+		<button onclick="openWin()" name="btn">창열기</button>
+		<hr>
+		<h1>회원가입하기(div팝업창)</h1>
+		<button onclick="registForm()" name="btn">회원가입</button>
+	</div>
+	<div id="regist">
+		<form>
+			<table>
+				<caption>회원가입</caption>
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" name="id" onclick="idchk()" readonly="readonly" />
+						<!-- 클릭하면 팝업창이 뜨게 끔 되어있음. readonly만 가능-->
+					<input type="button" value="중복체크" onclick="idCheck()" /></td>
+				</tr>
+				<tr>
+					<td>패스워드</td>
+					<td><input type="password" name="pwd" style="color: red;" checked="checked" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="button" value="확인" onclick="closeWin()" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<br/><br/><br/>
+	<iframe name="myframe"></iframe>
+	<!-- html 웹 문서안에 또 다른 웹 문서를 넣어줄 수 있음. 따라서 window2팝업창이 밑에 띄워짐 -->
+
+</body>
+</html>

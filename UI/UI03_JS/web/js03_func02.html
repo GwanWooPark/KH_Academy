@@ -15,25 +15,14 @@
         var func02 = function (i) {
             alert("익명 함수 :이름이 없는 함수" + i);
         };
+        // 재사용이 불가능하다.
 
         // 3. 리터럴 함수
-        /*
-
-            1. var tmp = function (msg) {
-                            alert(msg);
-                             }
-
-
-             2. tmp = function (myLiteral) {
-                           alert("안녕하세요, 리터럴 입니다.);
-                          }
-
-              3. literalPrn(tmp1)
-
-        */
+        // 리터럴 함수 :  이름이 없이 몸체만 있는 함수
         function literalPrn(myLiteral) {
             myLiteral("안녕하세요, 리터럴입니다.");
         }
+
 
         function func03() {
             literalPrn(function (msg) {
@@ -71,14 +60,14 @@
         }
 
         var amEdu = closureTest('Servlet');
-
+        // var tmp = closureTest(val);
+        // tmp();
+        /*
+          빈 괄호 이유 : 반환되는 값이 '함수' 값이므로 괄호가 있어야 반환되는 함수가 실행 가능
+         */
         function pmEdu(val) {
             closureTest(val)();
-            // var tmp = closureTest(val);
-            // tmp();
-            /*
-              빈 괄호 이유 : 반환되는 값이 '함수' 값이므로 괄호가 있어야 반환되는 함수가 실행 가능
-             */
+
         }
 
         var t = function test() {

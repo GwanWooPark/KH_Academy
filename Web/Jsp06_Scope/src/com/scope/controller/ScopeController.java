@@ -21,11 +21,15 @@ public class ScopeController extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
 
+        // page는 객체 전달이 되지 않아서 넣지 않았음
         String requestScope = (String) request.getAttribute("requestScope");
+        // request로 값을 담았다.
         HttpSession session = request.getSession();
         String sessionScope = (String) session.getAttribute("sessionScope");
+        // session으로 값을 담았다.
         ServletContext application = getServletContext();
         String applicationScope = (String) application.getAttribute("applicationScope");
+        // application으로 값을 담았다.
 
         System.out.println("request : " + requestScope);
         System.out.println("session : " + sessionScope);

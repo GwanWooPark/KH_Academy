@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>중복체크</title>
+
+<script type="text/javascript">
+	var ids=["khacademy","java","script"];
+	
+	function confirmChk(){
+		var id=document.getElementsByName("id")[0].value;
+		var div=document.getElementsByTagName("div")[0];
+
+		// div 태그안에 중복이 있는지 없는지 innerHTML로 string을 넣음.
+		if(ids.indexOf(id)!=-1){
+			div.innerHTML="<b>아이디가 존재합니다.</b>";
+		}else{
+			var userId="사용할 수 있는 아이디입니다."
+			          +"<input type='button' value='확인'"
+			          +"onclick='insertId(\""+id+"\")'>";
+			div.innerHTML=userId;
+		}
+
+	}
+
+
+	    function insertId(id){
+		opener.document.getElementsByName("id")[0].value=id;
+		// 특정한 이벤트가 발생 했을 시 강제로 포커스가 가도록함. 중복확인 누르면 비밀번호창에 입력 바가 깜빡거림.
+		opener.document.getElementsByName("pwd")[0].focus();
+		close();
+	}
+</script>
+
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td>아이디</td>
+			<td><input type="text" name="id"/></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="button" value="중복확인" onclick="confirmChk()"/>
+				<input type="button" value="취소" onclick="self.close()"/>
+			</td>
+		</tr>
+	</table>
+	<div></div>
+
+</body>
+</html>

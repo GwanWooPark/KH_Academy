@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+        img, #imgView {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function createImg() {
+            // 1. 이름이 rdo인 input 요소들을 가지고 온다.
+            var rdo = document.getElementsByName("rdo");
+            var radioVal = "";
+            // 2. 가지고 온 nodeList들을 반복문으로 반복하면서 라디오 버튼이 체크되어있다면, 자신의 value값을 가지고 와서 radioVal이라는 변수에 값 저장.
+            for (var i = 0; i < rdo.length; i++) {
+                if (rdo[i].checked) {
+                    radioVal = rdo[i].value;
+                }
+            }
+
+            // 3. img Tag를 생성하고 (변수 이름 img) 생성된 Tag에 src속성에 radioVal 값을 넣어주자.
+            var img = document.createElement("img");
+            img.setAttribute("src", "resource/image/" + radioVal)
+
+            // 4. id가 imgView인 Tag를 가지고 와서, 해당 태그의 자식요소와 위에서 만든 img Tag를 바꿔치기 하자.
+            var div = document.getElementById("imgView");
+            var chd = document.querySelector("#imgView > img");
+            div.replaceChild(img, chd);
+        }
+
+        function deleteImg() {
+            document.getElementById("imgView").innerHTML = "<img src = ''>";
+        }
+
+    </script>
+</head>
+<body>
+
+    <input type="radio" name="rdo" value="img01.png">img01<br>
+    <input type="radio" name="rdo" value="img02.png">img02<br>
+    <input type="radio" name="rdo" value="img03.png">img03<br>
+
+    <button onclick="createImg();">이미지 생성</button>
+    <button onclick="deleteImg();">이미지 삭제</button>
+    <br>
+    <div id = "imgView">
+        <img src="">
+    </div>
+
+</body>
+</html>

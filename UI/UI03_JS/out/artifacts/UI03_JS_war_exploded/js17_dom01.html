@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+
+        function searchParent() {
+            var child02 = document.getElementsByTagName("p")[1];
+            var parent = child02.parentNode; // 부모 탐색할 때 쓰는 함수
+
+            console.log(parent);
+            alert(parent.nodeName);
+            parent.style.backgroundColor = "yellow";
+        }
+
+        function searchChild() {
+            var div = document.getElementsByTagName("div");
+
+            alert(div.length);
+
+            var divChildren = div[0].childNodes;
+            console.log(divChildren);
+            alert("child03의 tagName : " + divChildren[5].tagName);
+            divChildren[5].style.backgroundColor = "skyblue";
+            // child03의 backgroundColor -> skyblue로
+            // Enter가 들어가 있으면 txt단이 생김 따라서 주소값이 변한다. ex) txt / tag1 / txt / tag2 / txt / tag3
+        }
+
+        function test01() {
+            var child = document.getElementsByTagName("p")[3];
+            var parent = child.parentNode;
+
+            parent.style.backgroundColor = "gold";
+        }
+
+        function test02() {
+            var div = document.getElementsByTagName("div");
+
+            var divChild = div[2].childNodes;
+            divChild[3].style.fontSize = "20pt";
+
+        }
+    </script>
+</head>
+<body>
+
+    <h1>부모 탐색, 자식 탐색</h1>
+    <div>
+        <p>child1</p>
+        <p>child2</p>
+        <p>child3</p>
+    </div>
+
+    <button onclick="searchParent();">부모 탐색</button>
+    <button onclick="searchChild();">자식 탐색</button>
+
+    <h3 onclick="test01();">1. "test01 태그를 포함한 div 태그"의 배경색을 적용하자.</h3>
+    <!-- parentNode 사용 -->
+    <h3 onclick="test02();">2. "2번지 div 태그에 포함된 test04 태그"의 폰트 크기를 20pt로 적용하자.</h3>
+    <!-- childNodes 사용 -->
+
+    <div>
+        <p>test01</p>
+        <p>test02</p>
+    </div>
+    <div>
+        <p>test03</p>
+        <p>test04</p>
+    </div>
+
+    <button onclick="test01();">test01</button>
+    <button onclick="test02();">test02</button>
+</body>
+</html>

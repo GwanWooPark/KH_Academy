@@ -29,13 +29,13 @@
         }
 
         function answer03() {
-            var link = document.getElementsByName("rdo");
-            if (link[0].value === "naver") {
-                window.open("www.naver.com");
-            } else if (link[1].value === "google") {
-                window.open("www.google.com");
-            } else {
-                window.open("www.w3cschools.com");
+
+            var rdoName = document.getElementsByName("rdo");
+            for(var i = 0; i < rdoName.length; i++){
+                if(rdoName[i].checked){
+                    url="http://www."+rdoName[i].value+".com";
+                    window.open(url);
+                }
             }
         }
 
@@ -54,19 +54,25 @@
         }
 
         function answer06() {
-            var loc = document.getElementById("locationSelect");
+            var options = document.getElementById("locationSelect");
+            var url="";
+            for(var i = 0 ; i < options.length ; i++){
+                if(options[i].selected){
+                    url = options[i].value;
+                }
+            }
+            location.href="http://www."+url+".com";
 
 
         }
 
         function answer07() {
-            var tmp = document.getElementById("numVal").innerText;
-
-            tmp.sort(function (a, b) {
+            var numVal = document.getElementById("numVal").innerHTML;
+            var numList = numVal.split(",");
+            numList.sort(function(a,b){
                 return a-b;
             });
-
-            alert(num);
+            alert(numList);
 
         }
 

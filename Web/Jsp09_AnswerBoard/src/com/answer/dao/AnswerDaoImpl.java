@@ -166,11 +166,57 @@ public class AnswerDaoImpl implements AnswerDao{
 
     @Override
     public int answerUpdate(int parentboardno) {
-        return 0;
+
+        Connection con = getConnection();
+
+        PreparedStatement pstm = null;
+        int res = 0;
+        try {
+            pstm = con.prepareStatement(ANSWER_UPDATE_SQL);
+            pstm.setInt(1, parentboardno);
+            pstm.setInt(2, parentboardno);
+            res = pstm.executeUpdate();
+
+            if (res > 0) {
+                commit(con);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(pstm);
+            close(con);
+        }
+        return res;
     }
 
     @Override
     public int answerInsert(AnswerDto dto) {
-        return 0;
+
+        Connection con = getConnection();
+
+        PreparedStatement pstm = null;
+        int res = 0;
+        try {
+            pstm = con.prepareStatement(ANSWER_INSERT_SQL);
+            pstm.setInt(1, dto.getBoardno());
+            pstm.setInt(2, dto.getBoardno());
+            pstm.setInt(3, dto.getBoardno());
+            pstm.setString(4, dto.getTitle());
+            pstm.setString(5, dto.getContent());
+            pstm.setString(6, dto.getWriter());
+            res = pstm.executeUpdate();
+
+            if (res > 0) {
+                commit(con);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(pstm);
+            close(con);
+        }
+        return res;
     }
 }

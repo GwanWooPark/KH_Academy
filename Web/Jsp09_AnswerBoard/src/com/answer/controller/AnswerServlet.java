@@ -89,6 +89,27 @@ public class AnswerServlet extends HttpServlet {
                 if (res > 0) {
                     dispatch(request, response, "answer.do?command=list");
                 }
+            } else if (command.equals("answerForm")) {
+
+                int boardno = Integer.parseInt(request.getParameter("boardno"));
+                AnswerDto dto = biz.selectOne(boardno);
+                request.setAttribute("dto", dto);
+                dispatch(request, response, "boardAnswer.jsp");
+            } else if (command.equals("answerProc")) {
+                int parentboardno = Integer.parseInt(request.getParameter("parentboardno"));
+                String writer = request.getParameter("writer");
+                String title = request.getParameter("title");
+                String content = request.getParameter("content");
+
+                AnswerDto dto = new AnswerDto(parentboardno, 0, 0, 0, title, content, writer, null);
+                int res = biz.answerProc(dto);
+
+                if (res > 0) {
+                    jsResponse(response, "답변 성공", "answer.do?command=list");
+
+                } else {
+                    jsResponse(response, "답변 실패", "answer.do?command=answerForm&boardno=" + parentboardno);
+                }
             }
         } catch (Exception e) {
             request.setAttribute("error", e);

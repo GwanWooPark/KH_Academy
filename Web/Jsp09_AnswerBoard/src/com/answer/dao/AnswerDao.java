@@ -24,9 +24,20 @@ public interface AnswerDao {
     String BOARD_DELETE_SQL = " DELETE FROM ANSWERBOARD "
                             + " WHERE BOARDNO = ? ";
 
-    String ANSWER_UPDATE_SQL = "";
+    String ANSWER_UPDATE_SQL = " UPDATE ANSWERBOARD "
+                             + " SET GROUPSEQ = GROUPSEQ + 1 "
+                             + " WHERE  "
+                             + "   GROUPNO = (SELECT GROUPNO FROM ANSWERBOARD WHERE BOARDNO = ?) "
+                             + " AND "
+                             + "   GROUPSEQ > (SELECT GROUPSEQ FROM ANSWERBOARD WHERE BOARDNO = ?) ";
 
-    String ANSWER_INSERT_SQL = "";
+    String ANSWER_INSERT_SQL = " INSERT INTO ANSWERBOARD "
+                             + " VALUES("
+                             + " BOARDNOSEQ.NEXTVAL, "
+                             + " (SELECT GROUPNO FROM ANSWERBOARD WHERE BOARDNO = ?), "
+                             + " (SELECT GROUPSEQ + 1 FROM ANSWERBOARD WHERE BOARDNO = ?), "
+                             + " (SELECT TITLETAB FROM ANSWERBOARD WHERE BOARDNO = ?) + 1, "
+                             + " ?, ?, ?, SYSDATE) ";
 
     public List<AnswerDto> selectList();
     public AnswerDto selectOne(int boardno);

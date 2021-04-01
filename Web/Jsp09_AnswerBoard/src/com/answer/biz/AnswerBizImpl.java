@@ -36,6 +36,14 @@ public class AnswerBizImpl implements AnswerBiz{
 
     @Override
     public int answerProc(AnswerDto dto) {
-        return 0;
+
+        // transaction
+        int update = dao.answerUpdate(dto.getBoardno());
+        int insert = dao.answerInsert(dto);
+
+        return (update + insert);
     }
+
+
+
 }

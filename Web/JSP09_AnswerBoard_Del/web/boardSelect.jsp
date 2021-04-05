@@ -25,9 +25,9 @@
         </tr>
         <tr>
             <td colspan="3" align="right">
-                <input type="button" value="삭제" onclick="location.href='answer.do?command=delete'">
+                <input type="button" value="삭제" onclick="location.href='answer.do?command=delete&boardno=${dto.boardno }'">
                 <input type="button" value="수정" onclick="location.href='answer.do?command=updateForm&boardno=${dto.boardno }'">
-                <input type="button" value="댓글" onclick="location.href='answer.do?command=answerInsertForm'">
+                <input type="button" value="댓글" onclick="location.href='answer.do?command=answerForm&boardno=${dto.boardno }'">
                 <input type="button" value="취소" onclick="location.href='answer.do?command=list'">
             </td>
         </tr>

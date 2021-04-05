@@ -8,7 +8,7 @@ public interface AnswerDao {
 
     String BOARD_LIST_SQL = " SELECT BOARDNO, GROUPNO, GROUPSEQ, TITLETAB, DELFLAG ,TITLE, CONTENT, WRITER, REGDATE  "
                           + " FROM ANSWERBOARD "
-                          + " ORDER BY BOARDNO DESC, GROUPSEQ ";
+                          + " ORDER BY GROUPNO DESC, GROUPSEQ ";
 
     String BOARD_SELECT_SQL = " SELECT BOARDNO, GROUPNO, GROUPSEQ, TITLETAB, DELFLAG ,TITLE, CONTENT, WRITER, REGDATE "
                             + " FROM ANSWERBOARD "
@@ -25,9 +25,30 @@ public interface AnswerDao {
                             + " SET DELFLAG = 'Y' "
                             + " WHERE BOARDNO = ? ";
 
-    String ANSWER_UPDATE_SQL = "  ";
+    String ANSWER_UPDATE_SQL = " UPDATE ANSWERBOARD "
+                             + " SET GROUPSEQ = GROUPSEQ + 1 "
+                             + " WHERE  "
+                             + "   GROUPNO = (SELECT GROUPNO FROM ANSWERBOARD WHERE BOARDNO = ?) "
+                             + " AND "
+                             + "   GROUPSEQ > (SELECT GROUPSEQ FROM ANSWERBOARD WHERE BOARDNO = ?) ";
 
-    String ANSWER_INSERT_SQL = "";
+    String ANSWER_INSERT_SQL =  " INSERT INTO ANSWERBOARD "
+                             + " VALUES( "
+                             + " BOARDNOSEQ.NEXTVAL, "
+                             + " (SELECT GROUPNO FROM ANSWERBOARD WHERE BOARDNO = ?), "
+                             + " (SELECT GROUPSEQ + 1 FROM ANSWERBOARD WHERE BOARDNO = ?), "
+                             + " (SELECT TITLETAB FROM ANSWERBOARD WHERE BOARDNO = ?) + 1, "
+                             + " 'N', "
+                             + " ?, ?, ?, SYSDATE) ";
+
+    String COUNT_SQL = " SELECT COUNT(*) FROM ANSWERBOARD ";
+
+    String PAGING_SQL = " SELECT BOARDNO, GROUPNO, GROUPSEQ, TITLETAB, DELFLAG ,TITLE, CONTENT, WRITER, REGDATE "
+                      + " FROM (SELECT ROWNUM AS rnum, A.BOARDNO, A.GROUPNO, A.GROUPSEQ, A.TITLETAB, A.DELFLAG, A.TITLE, A.CONTENT, A.WRITER, A.REGDATE "
+                      + "       FROM ( SELECT BOARDNO, GROUPNO, GROUPSEQ, TITLETAB, DELFLAG ,TITLE, CONTENT, WRITER, REGDATE "
+                      + "              FROM ANSWERBOARD "
+                      + "              ORDER BY GROUPNO DESC, GROUPSEQ ) A ) "
+                      + " WHERE rnum >= ? AND rnum <= ? ";
 
     public List<AnswerDto> selectList();
     public AnswerDto selectOne(int boardno);
@@ -38,4 +59,7 @@ public interface AnswerDao {
     public boolean answerUpdate(int parentboardno);
     public boolean answerInsert(AnswerDto dto);
 
+    public int getCount();
+
+    public List<AnswerDto> pageList(int startPageNum, int endPageNum);
 }

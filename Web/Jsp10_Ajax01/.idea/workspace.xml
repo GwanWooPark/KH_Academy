@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Jsp10_Ajax01:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4b9d5615-5323-48b2-ba23-3437458d4a24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Jsp10_Ajax01_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_tomcat_servlet_api_6_0_53.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/score/controller/ScoreServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/server-config.wsdd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/student.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jsp10_Ajxa02/src/com/score/controller/ScoreServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jsp10_Ajxa02/web/WEB-INF/server-config.wsdd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jsp10_Ajxa02/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jsp10_Ajxa02/web/score.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jsp10_Ajxa02/web/student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/.idea/artifacts/JSP09_AnswerBoard_Del_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/.idea/artifacts/JSP09_AnswerBoard_Del_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/JSP09_AnswerBoard_Del.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/JSP09_AnswerBoard_Del.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/out/production/JSP09_AnswerBoard_Del/com/answer/biz/AnswerBiz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/out/production/JSP09_AnswerBoard_Del/com/answer/biz/AnswerBizImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/out/production/JSP09_AnswerBoard_Del/com/answer/controller/AnswerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/out/production/JSP09_AnswerBoard_Del/com/answer/dao/AnswerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/out/production/JSP09_AnswerBoard_Del/com/answer/dao/AnswerDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/out/production/JSP09_AnswerBoard_Del/com/answer/db/JDBCTemplate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/out/production/JSP09_AnswerBoard_Del/com/answer/dto/AnswerDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/src/com/answer/biz/AnswerBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/src/com/answer/biz/AnswerBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/src/com/answer/biz/AnswerBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/src/com/answer/biz/AnswerBizImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/src/com/answer/controller/AnswerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/src/com/answer/controller/AnswerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/src/com/answer/dao/AnswerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/src/com/answer/dao/AnswerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/src/com/answer/dao/AnswerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/src/com/answer/dao/AnswerDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/WEB-INF/classes/com/answer/biz/AnswerBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/WEB-INF/classes/com/answer/biz/AnswerBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/WEB-INF/classes/com/answer/biz/AnswerBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/WEB-INF/classes/com/answer/biz/AnswerBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/WEB-INF/classes/com/answer/controller/AnswerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/WEB-INF/classes/com/answer/controller/AnswerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/WEB-INF/classes/com/answer/dao/AnswerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/WEB-INF/classes/com/answer/dao/AnswerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/WEB-INF/classes/com/answer/dao/AnswerDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/WEB-INF/classes/com/answer/dao/AnswerDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/boardList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/boardList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/boardSelect.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../JSP09_AnswerBoard_Del/web/boardSelect.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/artifacts/Test_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/Test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/out/production/Test/example/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/src/example/HelloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/web/WEB-INF/server-config.wsdd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/web/javascriptTest01_박관우.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/.idea/artifacts/servletTest_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/.idea/libraries/JAX_WS_Apache_Axis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/lib/axis.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/lib/commons-discovery-0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/lib/commons-logging-1.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/lib/jaxrpc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/lib/log4j-1.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/lib/saaj.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/lib/wsdl4j-1.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/classes/com/hello/controller/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/classes/example/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/lib/axis.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/lib/commons-discovery-0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/lib/commons-logging-1.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/lib/jaxrpc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/lib/log4j-1.2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/lib/saaj.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/lib/wsdl4j-1.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/server-config.wsdd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/out/artifacts/servletTest_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/servletTest.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/src/main/java/com/hello/controller/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/src/main/java/example/HelloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/src/main/java/임시" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/target/classes/com/hello/controller/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/target/classes/example/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/web/WEB-INF/server-config.wsdd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/web/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servletTest/web/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1qkADpgEuduSOeVuNq9AUAI9Cc3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.14941406" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.433" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.433" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Jsp10_Ajax01:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="583148ab-d425-4bd7-bbb9-d3e43528e1cf" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50938" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Jsp10_Ajax01:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b9d5615-5323-48b2-ba23-3437458d4a24" name="Default Changelist" comment="" />
+      <created>1617613100991</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617613100991</updated>
+      <workItem from="1617613102559" duration="1879000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -8,6 +8,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/answer.do")
@@ -49,10 +50,34 @@ public class AnswerServlet extends HttpServlet {
             } else {
                 jsResponse(response, "삭제 성공", "answer.do?command=select&boardno=" + boardno);
             }
+        } else if (command.equals("answerForm")) {
 
+            int boardno = Integer.parseInt(request.getParameter("boardno"));
+            AnswerDto dto = biz.selectOne(boardno);
+            request.setAttribute("dto", dto);
+            dispatch(request, response, "boardAnswer.jsp");
 
-        } else if (command.equals("answerInsertForm")) {
-            String a = "a";
+        } else if (command.equals("answerProc")) {
+
+            int parentboardno = Integer.parseInt(request.getParameter("parentboardno"));
+            String writer = request.getParameter("writer");
+            String title = request.getParameter("title");
+            String content = request.getParameter("content");
+
+            AnswerDto dto = new AnswerDto();
+            dto.setWriter(writer);
+            dto.setTitle(title);
+            dto.setContent(content);
+            dto.setBoardno(parentboardno);
+
+            boolean res = biz.answerProc(dto);
+
+            if (res) {
+                jsResponse(response, "답변 성공", "answer.do?command=list");
+            } else {
+                jsResponse(response, "답변 실패", "answer.do?command=select&boardno=" + parentboardno);
+            }
+
         } else if (command.equals("updateForm")) {
             int boardno = Integer.parseInt(request.getParameter("boardno"));
             AnswerDto dto = biz.selectOne(boardno);
@@ -98,6 +123,20 @@ public class AnswerServlet extends HttpServlet {
             } else {
                 jsResponse(response, "Failed..", "answer.do?command=list");
             }
+        } else if (command.equals("pageList")) {
+
+            int startPageNum = Integer.getInteger(request.getParameter("startPageNum"));
+            int endPageNum = startPageNum + 4;
+            System.out.println(startPageNum);
+            System.out.println(endPageNum);
+
+            List<AnswerDto> list = new ArrayList<AnswerDto>();
+            list = biz.pageList(startPageNum, endPageNum);
+
+
+            request.setAttribute("list", list);
+
+            dispatch(request, response, "pageList.jsp");
         }
     }
 

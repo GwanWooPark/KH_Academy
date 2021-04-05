@@ -13,4 +13,8 @@ public interface AnswerBiz {
     public boolean boardDelete(int boardno);
 
     public boolean answerProc(AnswerDto dto);
+
+    public int getCount();
+
+    public List<AnswerDto> pageList(int startPageNum, int endPageNum);
 }

@@ -2,7 +2,6 @@
   <artifact type="exploded-war" name="JSP09_AnswerBoard_Del:war exploded">
     <output-path>$PROJECT_DIR$/web</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="JSP09_AnswerBoard_Del/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="JSP09_AnswerBoard_Del" />
@@ -13,8 +12,10 @@
           <element id="library" level="project" name="taglibs-standard-impl-1.2.5" />
           <element id="library" level="project" name="ojdbc6" />
           <element id="library" level="project" name="JAX-WS-Apache Axis" />
+          <element id="library" level="project" name="org.apache.tomcat:servlet-api:6.0.53" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="JSP09_AnswerBoard_Del/web/Web" />
     </root>
   </artifact>
 </component>

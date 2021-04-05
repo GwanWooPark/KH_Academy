@@ -14,7 +14,7 @@
 
     <table border="1">
         <col width="50px"/>
-        <col width="100px"/>
+        <col width="300px"/>
         <col width="500px"/>
         <col width="100px"/>
 
@@ -30,7 +30,7 @@
             </c:when>
             <c:otherwise>
                 <c:forEach items="${list }" var="dto">
-                    <tr align="center">
+                    <tr>
                         <td>${dto.boardno }</td>
                         <td>${dto.writer }</td>
                         <td>
@@ -52,9 +52,11 @@
             </c:otherwise>
         </c:choose>
         <tr>
-            <td colspan="4" align="right"><input type="button" value="글 작성" onclick="location.href='answer.do?command=insertForm'"></td>
+            <td colspan="4" align="right">
+                <input type="button" value="글 작성" onclick="location.href='answer.do?command=insertForm'">
+                <input type="button" value="페이지 리스트" onclick="location.href='answer.do?command=pageList&startPageNum=1'">
+            </td>
         </tr>
     </table>
-
 </body>
 </html>

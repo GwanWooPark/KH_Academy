@@ -42,4 +42,14 @@ public class AnswerBizImpl implements AnswerBiz{
 
         return insert;
     }
+
+    @Override
+    public int getCount() {
+        return dao.getCount();
+    }
+
+    @Override
+    public List<AnswerDto> pageList(int startPageNum, int endPageNum) {
+        return dao.pageList(startPageNum, endPageNum);
+    }
 }

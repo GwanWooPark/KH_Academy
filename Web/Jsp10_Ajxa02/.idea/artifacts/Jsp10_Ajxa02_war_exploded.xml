@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Jsp10_Ajxa02:war exploded">
+    <output-path>$PROJECT_DIR$/web</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Jsp10_Ajxa02/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Jsp10_Ajxa02" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="json-simple-1.1.1" />
+          <element id="library" level="project" name="org.apache.tomcat:servlet-api:6.0.53" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

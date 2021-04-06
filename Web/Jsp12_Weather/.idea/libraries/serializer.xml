@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="serializer">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Data/xalan-j_2_7_2/serializer.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

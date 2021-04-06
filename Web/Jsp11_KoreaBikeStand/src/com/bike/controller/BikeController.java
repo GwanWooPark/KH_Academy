@@ -34,25 +34,30 @@ public class BikeController extends HttpServlet {
             }
 
             String data = request.getParameter("mydata");
+            /*
+               JsonElement : JsonObject, JsonArray, JsonPrimitive, JsonNull -> Json요소
+               JsonObject : name-value 쌍으로 이루어진 객체 -> Json 객체 { String : JsonElement }
+             */
 
             JsonElement element = JsonParser.parseString(data);   // json형식인 문자열(json data)을 파싱하여 JsonElement 형식으로 변환
             JsonObject jsonData = element.getAsJsonObject();      // 변환된 JsonElement를 JsonObject로 변환
-
+            // {"fields": [{},{}]
             JsonElement records = jsonData.get("records");       // json파일의 records(key)를 가지고온다
-            JsonArray recordsArray = records.getAsJsonArray();   // records를 Array형식으로 변
+            JsonArray recordsArray = records.getAsJsonArray();   // records를 JsonArray형식으로 변환
 
             List<BikeDto> list = new ArrayList<BikeDto>();
-            JsonArray resultArray = new JsonArray();            // 결과를 저장할 JsonArray 생
+            JsonArray resultArray = new JsonArray();            // 결과를 저장할 JsonArray 생성
 
             for (int i = 0; i < recordsArray.size(); i++) {     // 레코드 사이즈만큼
                 String name = recordsArray.get(i).getAsJsonObject().get("자전거대여소명").getAsString(); // 레코드 배열[i] 오브젝트의 자전거 대여소명을 name에 저장
-                String addr;
+                String addr = null;
 
                 if (recordsArray.get(i).getAsJsonObject().get("소재지도로명주소") != null) {              // 만약 "소재지도로명주소"가 널이 아니면
                     addr = recordsArray.get(i).getAsJsonObject().get("소재지도로명주소").getAsString();   // 소재지도로명주소로
                 } else {                                                                             // 그렇지 않으면 "소재지지번주소로"
                     addr = recordsArray.get(i).getAsJsonObject().get("소재지지번주소").getAsString();
                 }
+                // key값을 가져오면 key값의 value를 가지고옴
                 double latitude = recordsArray.get(i).getAsJsonObject().get("위도").getAsDouble();     // 변수에 위도 값
                 double longitude = recordsArray.get(i).getAsJsonObject().get("경도").getAsDouble();    // 변수에 경도 값
                 int bike_count = recordsArray.get(i).getAsJsonObject().get("자전거보유대수").getAsInt();  // 변수에 자전거 보유 대수 값
@@ -60,8 +65,8 @@ public class BikeController extends HttpServlet {
                 BikeDto dto = new BikeDto(name, addr, latitude, longitude, bike_count);
                 list.add(dto);
 
-                Gson gson = new Gson();
-                String jsonString = gson.toJson(dto);   // 자바 객체를 Json 표현식으로 변경해준다. "key" : "value"
+                Gson gson = new Gson();  // json 구조를 띄는 직렬화된 데이터를 JAVA객체로 역직렬화, 직렬화 해주는 자바 라이브러리
+                String jsonString = gson.toJson(dto);   // 자바 객체를 Json 표현식으로 변경해준다. {"key" : "value"}
                 resultArray.add(JsonParser.parseString(jsonString));    // json표현식으로 변경된 data를 JasonElement 형식으로 바꾸어서 resultArray에 담는다.
             }
 

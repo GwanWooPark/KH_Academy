@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Jsp12_Weather:war exploded">
+    <output-path>$PROJECT_DIR$/web</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Jsp12_Weather/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Jsp12_Weather" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="org.apache.tomcat:servlet-api:6.0.53" />
+          <element id="library" level="project" name="xalan" />
+          <element id="library" level="project" name="serializer" />
+          <element id="library" level="project" name="taglibs-standard-spec-1.2.5" />
+          <element id="library" level="project" name="taglibs-standard-jstlel-1.2.5" />
+          <element id="library" level="project" name="taglibs-standard-impl-1.2.5" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

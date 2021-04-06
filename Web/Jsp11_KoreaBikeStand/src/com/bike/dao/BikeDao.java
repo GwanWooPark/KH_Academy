@@ -20,6 +20,7 @@ public class BikeDao {
 
         PreparedStatement pstm = null;
         int res = 0;
+        int[] cnt = null;
 
         try {
             pstm = con.prepareStatement(sql);
@@ -29,10 +30,19 @@ public class BikeDao {
                 pstm.setDouble(3, dto.getLatitude());
                 pstm.setDouble(4, dto.getLongitude());
                 pstm.setInt(5, dto.getBike_count());
-                res = pstm.executeUpdate();
-                if (res > 0) {
-                    commit(con);
+                pstm.addBatch();
+            }
+
+            cnt = pstm.executeBatch();
+            for (int i = 0; i < cnt.length; i++) {
+                if (cnt[i] == -2) {
+                    res++;
                 }
+            }
+            if (list.size() == res) {
+                commit(con);
+            } else {
+                rollback(con);
             }
 
         } catch (SQLException e) {
@@ -41,7 +51,7 @@ public class BikeDao {
             close(pstm);
             close(con);
         }
-        return true;
+        return (list.size() == res) ? true : false;
     }
 
     public boolean delete() {

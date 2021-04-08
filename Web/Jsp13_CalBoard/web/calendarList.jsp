@@ -23,7 +23,7 @@
         <col width="200">
         <tr>
             <th>번호</th>
-            <th>작성자</th>
+            <th>글 번호</th>
             <th>제목</th>
             <th>일정</th>
             <th>작성 날짜</th>
@@ -43,6 +43,7 @@
                                 <jsp:getProperty name="util" property="todates"/>
                             </td>
                             <td><fmt:formatDate value="${dto.regdate }" pattern="yyyy.MM.dd"></fmt:formatDate></td>
+                            <!-- Formats a date and/or time using the supplied styles and pattern -->
                         </tr>
                     </c:forEach>
                 </c:otherwise>

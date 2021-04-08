@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="ojdbc6">
+  <library name="json-lib-2.4-jdk15">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../Data/ojdbc6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Data/json/json-lib-2.4-jdk15.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,7 +1,11 @@
 package com.cal.controller;
 
+import com.cal.dao.CalDao;
+import com.cal.dto.CalDto;
+
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 public class Util {
 
@@ -39,9 +43,22 @@ public class Util {
     }
 
     public static String isTwo(String msg) {
-
-
         return (msg.length() < 2) ? "0" + msg : msg;
+    }
+
+    public static String getCalView(int i, List<CalDto> list) {
+
+        String d = isTwo(i + "");
+        String res = "";
+
+        for (CalDto dto : list) {
+            if (dto.getMdate().substring(6, 8).equals(d)) {
+                res += "<p>"
+                     + ((dto.getTitle().length() > 6) ? dto.getTitle().substring(0,6) + "..." : dto.getTitle())
+                     + "</p>";
+            }
+        }
+        return res;
     }
 
 }

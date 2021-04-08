@@ -28,6 +28,7 @@ public class CalServlet extends HttpServlet {
             response.sendRedirect("calendar.jsp");
 
         } else if (command.equals("calendarList")) {
+
             String year = request.getParameter("year");
             String month = request.getParameter("month");
             String date = request.getParameter("date");
@@ -40,6 +41,7 @@ public class CalServlet extends HttpServlet {
             dispatch(request, response, "calendarList.jsp");
 
         } else if (command.equals("insertCalendar")) {
+
             String year = request.getParameter("year");
             String month = Util.isTwo(request.getParameter("month"));
             String date = Util.isTwo(request.getParameter("date"));
@@ -60,9 +62,6 @@ public class CalServlet extends HttpServlet {
                 jsResponse(response, "일정 추가 실패", "cal.do?command=calendar&mdate=" + mdate);
 
             }
-
-
-
         }
     }
 

@@ -82,4 +82,77 @@ public class CalDao {
 
         return res;
     }
+
+    public List<CalDto> calendarViewList(String id, String yyyyMM) {
+
+        Connection con = getConnection();
+
+        String sql = " SELECT * "
+                   + " FROM ( "
+                   + " SELECT (ROW_NUMBER() over (PARTITION BY SUBSTR(MDATE, 1, 8) ORDER BY MDATE)) RN, SEQ, ID, TITLE, CONTENT, MDATE, REGDATE "
+                   + " FROM CALBOARD "
+                   + " WHERE ID = ? AND SUBSTR(MDATE, 1, 6) = ? "
+                   + " ) "
+                   + " WHERE RN BETWEEN 1 AND 3 ";
+
+        PreparedStatement pstm = null;
+        ResultSet rs = null;
+        List<CalDto> list = new ArrayList<CalDto>();
+
+        try {
+            pstm = con.prepareStatement(sql);
+            pstm.setString(1, id);
+            pstm.setString(2, yyyyMM);
+            rs = pstm.executeQuery();
+            while (rs.next()) {
+                CalDto dto = new CalDto(rs.getInt(2),
+                                        rs.getString(3),
+                                        rs.getString(4),
+                                        rs.getNString(5),
+                                        rs.getString(6),
+                                        rs.getDate(7));
+
+                list.add(dto);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(rs);
+            close(pstm);
+            close(con);
+        }
+
+        return list;
+    }
+
+    public int calendarViewCount(String id, String yyyyMMdd) {
+
+        Connection con = getConnection();
+
+        String sql = " SELECT COUNT(*) FROM CALBOARD WHERE ID = ? AND SUBSTR(MDATE, 1, 8) = ? ";
+
+        PreparedStatement pstm = null;
+        ResultSet rs = null;
+        int count = 0;
+
+        try {
+            pstm = con.prepareStatement(sql);
+            pstm.setString(1, id);
+            pstm.setString(2, yyyyMMdd);
+            rs = pstm.executeQuery();
+            while (rs.next()) {
+                count = rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(rs);
+            close(pstm);
+            close(con);
+        }
+
+        return count;
+    }
 }

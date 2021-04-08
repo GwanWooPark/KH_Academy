@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="ojdbc6">
+  <library name="ezmorph-1.0.6">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../Data/ojdbc6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Data/json/ezmorph-1.0.6.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

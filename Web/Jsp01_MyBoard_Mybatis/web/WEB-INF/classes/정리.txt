@@ -1,0 +1,10 @@
+경로 : /
+클래스(패키지) : .
+
+dataSource : Connection 객체
+enviroment(s) : 개발(연결) 환경
+
+config.xmk : mybatis의 전반적인 설정 저장
+
+property = setter이름
+column table column 값

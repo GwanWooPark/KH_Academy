@@ -1,6 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.my.dto.MyBoardDto" %>
 <%@ page import="com.my.biz.MyBoardBiz" %>
+
 <%@ page contentType="text/html;charset=UTF-8"  pageEncoding="UTF-8" language="java" %>
 <%
     request.setCharacterEncoding("utf-8");

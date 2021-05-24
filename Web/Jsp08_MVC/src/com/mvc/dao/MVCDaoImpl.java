@@ -1,11 +1,11 @@
 package com.mvc.dao;
 
-import com.mvc.dto.MVCDto;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import static com.mvc.db.JDBCTemplates.*;
+import com.mvc.dto.MVCDto;
 
 public class MVCDaoImpl implements MVCDao {
 

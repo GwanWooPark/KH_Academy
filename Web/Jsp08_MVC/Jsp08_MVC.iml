@@ -9,6 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
       <facet type="webservices" name="WebServices">
         <configuration ws.engine="Apache Axis" />
@@ -24,10 +25,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="JAX-WS-Apache Axis" level="project" />
     <orderEntry type="library" exported="" name="org.apache.tomcat:servlet-api:6.0.53" level="project" />
-    <orderEntry type="library" exported="" name="ojdbc6" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.433" level="application_server_libraries" />
     <orderEntry type="library" name="taglibs-standard-impl-1.2.5" level="project" />
     <orderEntry type="library" name="taglibs-standard-jstlel-1.2.5" level="project" />
     <orderEntry type="library" name="taglibs-standard-spec-1.2.5" level="project" />
+    <orderEntry type="library" name="ojdbc6" level="project" />
   </component>
 </module>
